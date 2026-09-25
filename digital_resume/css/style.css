@@ -1,0 +1,346 @@
+/* Colors: Arctic Cabin (dark) */
+:root {
+    --bg: #141A24;
+    --panel: #1C2433;
+    --main: #7FD1C7;
+    --second: #B8A4E3;
+    --text: #EDE6DA;
+}
+
+/* Colors: Arctic Cabin (light), when the theme switch is checked */
+:root:has(#theme-toggle:checked) {
+    --bg: #F3EFE8;
+    --panel: #E3E7EE;
+    --main: #2A766D;
+    --second: #6A54A6;
+    --text: #1C2433;
+}
+
+/* Reset: width and height include padding and border */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Base: Space Grotesk for all readable text */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Space Grotesk", sans-serif;
+    /* TODO: smaller, equal padding for mobile */
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    line-height: 1.5;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* Name: VT323 retro terminal font */
+h1 {
+    font-family: "VT323", monospace;
+    color: var(--main);
+    font-size: 2.5rem;
+    transition: color 0.4s;
+}
+
+h2 {
+    color: var(--main);
+    transition: color 0.4s;
+    font-family: "VT323", monospace;
+    font-size: 2rem;
+}
+
+nav {
+    font-family: "VT323", monospace;
+}
+
+a {
+    color: var(--main);
+    transition: background-color 0.25s, color 0.25s;
+}
+
+a:hover, a:focus-visible, a:active {
+    background-color: var(--main);
+    color: var(--bg);
+}
+
+/* Padding is top/bottom and left/right */
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-family: "VT323", monospace;
+}
+
+/* Language toggle design */
+ul.lang-switch {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  border: 1px solid var(--main);
+  font-family: "VT323", monospace;
+}
+
+.lang-switch a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    width: calc(7ch + 20px);
+}
+
+.lang-switch a[aria-current="page"] {
+    background-color: var(--main);
+    color: var(--bg);
+}
+
+article {
+    background-color: var(--panel);
+    /* TODO: smaller, equal padding for mobile */
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--main);
+    transition: background-color 0.4s, border-color 0.4s;
+}
+
+/* Theme switch: the pill */
+.switch {
+    position: relative;
+    display: inline-flex;
+    border: 1px solid var(--main);
+    font-family: "VT323", monospace;
+    cursor: pointer;
+}
+
+/* Hide the real checkbox but keep it keyboard-accessible */
+.switch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* DARK / LIGHT words, above the slider */
+.switch-text {
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    text-align: center;
+    width: calc(7ch + 20px);
+}
+
+/* Sliding highlight, covers one half */
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--main);
+    transition: transform 0.4s;
+}
+
+/* Checked = light: slide to the right half */
+.switch input:checked ~ .slider {
+    transform: translateX(100%);
+}
+
+/* Keyboard focus ring */
+.switch input:focus-visible ~ .slider {
+    outline: 2px solid var(--second);
+}
+
+/* Active word: dark text so it stays readable on the highlight */
+/* Unchecked = dark mode: DARK is under the highlight */
+.switch input:not(:checked) ~ .switch-dark {
+    color: var(--bg);
+}
+
+/* Checked = light mode: LIGHT is under the highlight */
+.switch input:checked ~ .switch-light {
+    color: var(--bg);
+}
+
+/* Neofetch block */
+#neofetch {
+    font-family: "VT323", monospace;
+}
+
+#neofetch pre {
+   color: var(--main); 
+   overflow: auto;
+}
+
+#neofetch dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1ch;
+    margin: 0;
+}
+
+#neofetch dt {
+    color: var(--main);
+}
+
+#neofetch dt::after {
+    content: ":";
+}
+
+#neofetch dd {
+    margin: 0;
+}
+
+#neofetch .neofetch-colors span {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    /* or var(--text) */
+    border: 1px solid var(--main);
+}
+
+#neofetch .neofetch-colors span:nth-child(1) {
+    background-color: var(--bg);
+}
+
+#neofetch .neofetch-colors span:nth-child(2) {
+    background-color: var(--panel);
+}
+
+#neofetch .neofetch-colors span:nth-child(3) {
+    background-color: var(--main);
+}
+
+#neofetch .neofetch-colors span:nth-child(4) {
+    background-color: var(--second);
+}
+
+#neofetch .neofetch-colors span:nth-child(5) {
+    background-color: var(--text);
+}
+
+.neofetch-title {
+    color: var(--main);
+}
+
+/* Neofetch info: no default paragraph margins, so the title lines up with the portrait */
+#neofetch .neofetch-info p {
+    margin: 0;
+}
+
+h2::before {
+    content: "> ";
+    color: var(--second);
+}
+
+/* Blinking cursor for terminal look */
+h1::after {
+    content: "_";
+    animation: cursor-blink 1s steps(2) infinite;
+}
+
+@keyframes cursor-blink {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Contact form buttons: terminal style + inverted highlight */
+#contact-form input[type="submit"], #contact-form input[type="reset"] {
+    font-family: "VT323", monospace;
+    border: 1px solid var(--main);
+    background: transparent;
+    color: var(--main);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+#contact-form input[type="submit"]:hover,
+#contact-form input[type="submit"]:focus-visible,
+#contact-form input[type="reset"]:hover,
+#contact-form input[type="reset"]:focus-visible {
+    background-color: var(--main);
+    color: var(--bg);
+}
+
+/* Contact form: each label on its own line, above its field */
+#contact-form label {
+    display: block;
+    margin-top: 1rem;
+}
+
+/* Contact form fields: own line, themed with the palette */
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--main);
+    font-family: inherit;
+}
+
+/* Tablet and up */
+@media (min-width:768px) {
+    #neofetch {display: flex; flex-wrap: wrap; column-gap: 2rem; align-items: flex-start;}
+    #neofetch > p {flex-basis: 100%;}
+    #neofetch .neofetch-info {flex: 1; min-width: 0; margin: 0;}
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    header, main {max-width: 60rem; margin: 0 auto;}
+}
+
+/* Portrait: ASCII on top, color photo revealed on hover, click or keyboard focus */
+#neofetch .portrait {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+/* The ASCII sets the size of the portrait and hides the photo behind it */
+#neofetch .portrait pre {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    line-height: 1.5;
+    background-color: var(--bg);
+    transition: opacity 0.6s;
+    font-family: monospace;
+    font-size: 0.26rem;
+}
+
+/* The photo fills exactly the ASCII's space, underneath it */
+#neofetch .portrait img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Reveal: the ASCII fades out */
+#neofetch .portrait:hover pre,
+#neofetch .portrait:focus pre {
+    opacity: 0;
+}
+
+/* Keyboard users see where the focus is */
+#neofetch .portrait:focus-visible {
+    outline: 2px solid var(--second);
+}

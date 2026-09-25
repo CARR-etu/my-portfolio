@@ -1,0 +1,131 @@
+**// Cybersecurity Work-Study (Alternance) – Master of Science, Epitech**
+
+Schedule: 4 weeks in company / 2 weeks at school
+
+Available: January 2027
+
+Duration: 33 months (January 2027 – September 2029, end date to confirm)
+
+## > Profile
+
+Cybersecurity student and former English teacher for computer science students, passionate about Linux, free and open-source software, and data security. Interested in cybersecurity, AI and big data. I am looking for a work-study position (alternance) in cybersecurity to put my systems and networking skills into practice, bringing the rigor and teaching skills I developed in education.
+
+## > Links
+
+linkedin.com/in/carodriquesroque/
+github.com/CARR-etu
+profile.hackthebox.com/profile/01a0ae73-4e22-7148-8dfc-8bda61d98d81?utm_medium=copy_url
+
+## > Projects & Practice
+
+### Linux Homelab
+
+*Personal project · 2026*
+
+- Installed and hardened a Linux server (key-based SSH, firewall, updates)
+- Set up a virtual network to test tools and configurations
+
+### Hack The Box
+
+*Regular practice · XX challenges solved*
+
+- Web, network and forensics challenges; write-ups published on GitHub
+
+### Self-hosted AI
+
+*Pré-MSc · Language / tech · 2026*
+
+- What you built, in one results-oriented line
+- What you learned or solved (security, performance, teamwork)
+
+### Digital Portfolio
+
+*Master of Science · HTML / CSS / GitHub · 2026*
+
+- What you built, in one results-oriented line
+- What you learned or solved (security, performance, teamwork)
+
+## > Experience
+
+### Exam Invigilator
+
+*École Centrale Méditerranée, Marseille · March 2026 – present*
+
+- Supervised exams following strict procedures: identity checks, secure handling of exam papers, incident management
+
+### English Teacher – Scientific English
+
+*Aix-Marseille University, Marseille · October 2022 – August 2025*
+
+- Taught technical English to science and computer science students: designed the curriculum and course materials, managed grades and learning activities
+- Researched scientific topics to tailor courses to each field (e.g. IoT, cybersecurity, networks and telecommunications)
+
+### Freelance Translator (French → English)
+
+*Angel Translations, Marseille · May 2021 – present*
+
+- Translated cultural and artistic documents; managed client relations, administration and invoicing independently
+
+### English Language Assistant
+
+*Lycée Jean Perrin, Marseille · October 2020 – April 2022*
+
+- Taught English to high school, BTS and preparatory class students
+
+### Research Assistant – Bilingualism Lab
+
+*University of California, Santa Cruz, USA · April 2019 – June 2019*
+
+- Analyzed English and Spanish audio data using Praat (phonetic analysis software)
+
+### Client Management Intern
+
+*Trizic, Inc. (fintech), San Francisco, USA · June 2015 – July 2015*
+
+- Managed client data in Salesforce: data entry, updates, follow-ups and reporting
+- Wrote glossaries and user manuals for fintech software
+
+## > Education
+
+### Master of Science in Cybersecurity and AI
+
+*Epitech, Marseille · 2026 – 2027*
+
+### Bachelor of Arts – Applied Linguistics and Multilingualism (Honors)
+
+*University of California, Santa Cruz · 2016 – 2020*
+
+- International exchange year: international relations, Southwest Asia and North Africa (Sciences Po Lyon, Université Lumière Lyon 2, University of Geneva) · 2019 – 2020
+
+## > Skills
+
+- **Systems:** Linux, Bash, macOS, Windows
+- **Networking:** Nmap
+- **Languages:** Python, SQL, HTML, CSS
+- **Tools:** VirtualBox, Salesforce, Praat
+- **Security:** Pentesting fundamentals
+- **Hardware:** Electronics, audiovisual equipment (installation and maintenance)
+- **Soft skills:** Teaching and knowledge sharing, following procedures, autonomy, working alone or in a team
+
+## > Certifications
+
+- Cisco Certified Support Technician (CCST) Cybersecurity (in progress)
+- French Sign Language (LSF) – Level 1 · Aix-Marseille University · Spring 2024
+
+## > Volunteering
+
+### Studio Son Mars, Marseille
+
+- Built a community music recording studio: construction, audio equipment setup, communication and project coordination
+
+## > Languages
+
+- **English:** Native
+- **French:** Bilingual
+- **Spanish:** Intermediate
+- **Arabic:** Basic
+- **French Sign Language (LSF):** Basic
+
+## > Interests
+
+Electronics and computer tinkering, free software, retro gaming, DJing and music production, radio, science fiction, bike touring and hiking

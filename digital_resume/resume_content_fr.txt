@@ -1,0 +1,131 @@
+**// Alternance Cybersécurité – Master of Science, Epitech**
+
+Rythme : 4 semaines entreprise / 2 semaines école
+
+Disponible : janvier 2027
+
+Durée : 33 mois (janvier 2027 – septembre 2029, date de fin à confirmer)
+
+## > Profil
+
+Étudiant en cybersécurité, ancien enseignant d’anglais pour les informaticiens, passionné de Linux, de logiciel libre et de la sécurité des données — orientation cybersécurité, IA et Big Data. Je recherche une alternance en cybersécurité pour mettre en pratique mes compétences en systèmes et réseaux, avec la rigueur et la pédagogie acquises en enseignement.
+
+## > Liens
+
+linkedin.com/in/carodriquesroque/
+github.com/CARR-etu
+profile.hackthebox.com/profile/01a0ae73-4e22-7148-8dfc-8bda61d98d81?utm_medium=copy_url
+
+## > Projets & pratique
+
+### Homelab Linux
+
+*Projet personnel · 2026*
+
+- Installation et durcissement d’un serveur Linux (SSH par clé, pare-feu, mises à jour)
+- Mise en place d’un réseau virtuel pour tester outils et configurations
+
+### Hack The Box
+
+*Pratique régulière · XX challenges résolus*
+
+- Challenges web, réseau et forensic ; rédaction de write-ups sur GitHub
+
+### IA auto-hébergée
+
+*Pré-MSc · Langage / techno · 2026*
+
+- Ce que vous avez construit, en une ligne orientée résultat
+- Ce que vous avez appris ou résolu (sécurité, performance, travail en équipe)
+
+### Portfolio numérique
+
+*Master of Science · HTML / CSS / GitHub · 2026*
+
+- Ce que vous avez construit, en une ligne orientée résultat
+- Ce que vous avez appris ou résolu (sécurité, performance, travail en équipe)
+
+## > Expérience
+
+### Surveillant d’examen
+
+*École Centrale Méditerranée, Marseille · mars 2026 – présent*
+
+- Accueil et supervision des examens : contrôle d’identité, distribution/collecte des sujets, gestion d’incidents et dépôt des copies
+
+### Enseignant – Anglais scientifique
+
+*Aix-Marseille Université, Marseille · octobre 2022 – août 2025*
+
+- Enseignement de l’anglais technique pour étudiants en sciences/informatique : création du cursus et du matériel, gestion des notes et activités pédagogiques
+- Recherche en matière scientifique pour personnaliser les cursus en fonction du domaine (ex : IoT, cybersécurité, réseaux et télécommunications)
+
+### Traducteur indépendant (français → anglais)
+
+*Angel Translations, Marseille · mai 2021 – présent*
+
+- Traduction français → anglais de documents culturels et artistiques, gestion administrative et facturation
+
+### Assistant de langue anglaise
+
+*Lycée Jean Perrin, Marseille · octobre 2020 – avril 2022*
+
+- Enseignement de l’anglais aux lycéens, BTS et prépa sur les thèmes des États-Unis
+
+### Assistant de recherche – Laboratoire de recherche bilingue
+
+*Santa Cruz, Californie, États-Unis · avril 2019 – juin 2019*
+
+- Analyse phonologique de données audio en anglais et espagnol avec le logiciel Praat
+
+### Stagiaire gestion clients
+
+*Trizic, Inc. (fintech), San Francisco, États-Unis · juin 2015 – juillet 2015*
+
+- Gestion de clients sous Salesforce : saisie, mise à jour, relances et reporting
+- Rédaction de glossaires et manuels utilisateurs pour logiciels fintech
+
+## > Formation
+
+### Master of Science en Cybersécurité et IA
+
+*Epitech, Marseille · 2026 – 2027*
+
+### Bachelor of Arts – Linguistique appliquée et plurilinguisme (mention Honneur)
+
+*University of California, Santa Cruz · 2016 – 2020*
+
+- Mobilité internationale : relations internationales et culture en Asie du Sud-Ouest et Afrique du Nord (Sciences Po Lyon, Université Lumière Lyon 2, Université de Genève) · 2019 – 2020
+
+## > Compétences
+
+- **Systèmes :** Linux, Bash, macOS, Windows
+- **Réseau :** Nmap
+- **Langages :** Python, SQL, HTML, CSS
+- **Outils :** VirtualBox, Salesforce, Praat
+- **Sécurité :** bases du pentest
+- **Matériel :** électronique, installation et maintenance de matériel audiovisuel
+- **Savoir-être :** pédagogie et transmission, respect des procédures, autonomie et polyvalence, travail seul ou en équipe
+
+## > Certifications
+
+- Cisco Certified Support Technician (CCST) Cybersecurity (en cours)
+- Certification en Langue des Signes Française – Niveau 1 · Aix-Marseille Université · printemps 2024
+
+## > Bénévolat
+
+### Studio Son Mars, Marseille
+
+- Construction d’un studio d’enregistrement de musique communautaire, installation du matériel audio, gestion de la communication et du chantier
+
+## > Langues
+
+- **Anglais :** langue maternelle
+- **Français :** bilingue
+- **Espagnol :** intermédiaire
+- **Arabe :** notions
+- **Langue des signes française :** notions
+
+## > Intérêts
+
+Bidouillage électronique/informatique, logiciel libre, rétro-gaming, DJ/production et mixage de musique, émission radio, science-fiction, voyage à vélo et randonnée
