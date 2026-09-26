@@ -9,29 +9,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+    <body>
     <header>
-        <h1>Chase Angelo RODRIQUES ROQUE</h1>
-        <p>Cybersecurity student</p>
-        <ul class="lang-switch">
-            <li><a href="../index.html" hreflang="fr">FR</a></li>
-            <li><a href="index.html" hreflang="en" aria-current="page">EN</a></li>
-        </ul>
-        <label class="switch">
-            <input type="checkbox" id="theme-toggle" aria-label="Light mode">
-            <span class="slider"></span>
-            <span class="switch-text switch-dark">DARK</span>
-            <span class="switch-text switch-light">LIGHT</span>
-        </label>
-        <nav>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact-form">Contact me</a></li>
+        <div class="id">
+            <h1>Chase Angelo RODRIQUES ROQUE</h1>
+            <p>Cybersecurity student</p>    
+        </div>
+        <div class="header-controls">
+            <ul class="lang-switch">
+                <li><a href="../index.html" hreflang="fr">FR</a></li>
+                <li><a href="index.html" hreflang="en" aria-current="page">EN</a></li>
             </ul>
-        </nav>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle" aria-label="Light mode">
+                <span class="slider"></span>
+                <span class="switch-text switch-dark">DARK</span>
+                <span class="switch-text switch-light">LIGHT</span>
+            </label>
+            <nav>
+                <details>
+                    <summary aria-label="Menu">☰</summary>
+                    <ul>
+                        <li><a href="#profile">Profile</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#volunteering">Volunteering</a></li>
+                        <li><a href="#languages">Languages</a></li>
+                        <li><a href="#interests">Interests</a></li>
+                        <li><a href="#contact-form">Contact me</a></li>
+                    </ul>   
+                </details>
+            </nav>    
+        </div>
     </header>
     <main>
         <section id="neofetch">
@@ -114,7 +126,7 @@
                     <dt>OS</dt>
                     <dd>Cybersecurity student · MSc Epitech</dd>
                     <dt>Host</dt>
-                    <dd>Epitech Marseille · 2026–2029</dd>
+                    <dd>Epitech Marseille · 2026 - 2029</dd>
                     <dt>Kernel</dt>
                     <dd>Linguist → Security v2.0</dd>
                     <dt>Uptime</dt>
@@ -154,12 +166,12 @@
         <section id="profile">
             <h2>Profile</h2>
             <p>Cybersecurity student and former English teacher for computer science students, passionate about Linux, free and open-source software, and data security, with a focus on cybersecurity, AI and big data. I am looking for a work-study position in cybersecurity to put my systems and networking skills into practice, bringing the rigor and teaching skills I developed in education.</p>
-        </section>    
+        </section>
         <section id="projects">
             <h2>Projects</h2>
             <article>
                 <h3>Linux Homelab</h3>
-                <p>Personal NAS - 2026</p>
+                <p>Personal NAS · 2026 - Present</p>
                 <ul>
                     <li>Installed and hardened a Linux server (key-based SSH, firewall, updates)</li>
                     <li>Set up a virtual network to test tools and configurations</li>
@@ -174,7 +186,7 @@
             </article>
             <article>
                 <h3>Self-hosted AI</h3>
-                <p>Personal project - 2026</p>
+                <p>Personal project · 2026 - Present</p>
                 <ul>
                     <li>Deployed and compared local LLMs (Ollama, Jan, GPT4All): data processed with no cloud and no leaks to third parties</li>
                     <li>Restricted file access following the principle of least privilege</li>
@@ -186,7 +198,7 @@
             <h2>Experience</h2>
             <article>
                 <h3>Teacher - Scientific English</h3>
-                <p>Aix-Marseille University, Marseille - October 2022 to August 2025</p>
+                <p>Aix-Marseille University, Marseille · October 2022 - August 2025</p>
                 <ul>
                     <li>Taught technical English to science and computer science students: designed the curriculum and course materials, managed grades and learning activities</li>
                     <li>Researched scientific topics to tailor courses to each field (e.g. IoT, cybersecurity, networks and telecommunications)</li>
@@ -197,13 +209,13 @@
             <h2>Education</h2>
             <article>
                 <h3>Master of Science in Cybersecurity and AI</h3>
-                <p>Epitech, Marseille - 2026 to 2029</p>
+                <p>Epitech, Marseille · 2026 - 2029</p>
             </article>
             <article>
                 <h3>Bachelor of Arts - Applied Linguistics and Multilingualism (Honors)</h3>
-                <p>University of California, Santa Cruz - 2016 to 2020</p>
+                <p>University of California, Santa Cruz · 2016 - 2020</p>
                 <ul>
-                    <li>International exchange: international relations and culture in Southwest Asia and North Africa (Sciences Po Lyon, Université Lumière Lyon 2, University of Geneva), 2019 to 2020</li>
+                    <li>International exchange: international relations and culture in Southwest Asia and North Africa (Sciences Po Lyon, Université Lumière Lyon 2, University of Geneva) · 2019 – 2020</li>
                 </ul>
             </article>
         </section>
@@ -222,8 +234,8 @@
         <section id="certifications">
             <h2>Certifications</h2>
             <ul>
-                <li><a href="https://www.cisco.com/site/us/en/learn/training-certifications/certifications/support-technician/index.html#accordion-126b124179-item-7335c2761d">Cisco Certified Support Technician (CCST) Cybersecurity</a> (in progress)</li>
-                <li>French Sign Language (LSF) Certification - Level 1, Aix-Marseille University, spring 2024</li>
+                <li><a href="https://www.cisco.com/site/us/en/learn/training-certifications/certifications/support-technician/index.html">Cisco Certified Support Technician (CCST) Cybersecurity</a> (in progress)</li>
+                <li>French Sign Language (LSF) Certification - Level 1 · Aix-Marseille University · Spring 2024</li>
             </ul>
         </section>
         <section id="volunteering">
@@ -261,7 +273,7 @@
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-                
+
                 <label for="tel-num">Phone number:</label>
                 <input type="tel" id="tel-num" name="tel-num">
 
@@ -274,6 +286,6 @@
         </section>
     </main>
     <footer>
+        <p><a href="#">↑ Back to top ↑</a></p>
+        <p>Chase Angelo RODRIQUES ROQUE - 2026 - Made in HTML/CSS</p>
     </footer>
-</body>
-</html>

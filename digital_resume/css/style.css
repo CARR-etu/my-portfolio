@@ -1,4 +1,29 @@
-/* Colors: Arctic Cabin (dark) */
+/* ==========================================================================
+   Digital resume — style.css
+   Shared by index.html (FR) and en/index.html (EN)
+
+   Contents
+   1.  Colors (variables)
+   2.  Base
+   3.  CRT effect
+   4.  Typography & links
+   5.  Header
+   6.  Language switch (FR | EN)
+   7.  Theme switch (dark | light)
+   8.  Menu (☰)
+   9.  Sections & articles
+   10. Neofetch
+   11. Portrait & glitch reveal
+   12. Contact form
+   13. Footer
+   14. Reduced motion
+   15. Responsive
+   ========================================================================== */
+
+
+/* ===== 1. Colors (variables) ===== */
+
+/* Arctic Cabin (dark), the default */
 :root {
     --bg: #141A24;
     --panel: #1C2433;
@@ -7,7 +32,7 @@
     --text: #EDE6DA;
 }
 
-/* Colors: Arctic Cabin (light), when the theme switch is checked */
+/* Arctic Cabin (light), when the theme switch is checked */
 :root:has(#theme-toggle:checked) {
     --bg: #F3EFE8;
     --panel: #E3E7EE;
@@ -16,26 +41,85 @@
     --text: #1C2433;
 }
 
-/* Reset: width and height include padding and border */
+
+/* ===== 2. Base ===== */
+
+/* Width and height include padding and border */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Base: Space Grotesk for all readable text */
+/* Menu links scroll smoothly to their section */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Space Grotesk for all readable text */
 body {
     background-color: var(--bg);
     color: var(--text);
     font-family: "Space Grotesk", sans-serif;
-    /* TODO: smaller, equal padding for mobile */
-    padding-top: 50px;
-    padding-right: 20px;
-    padding-bottom: 50px;
-    padding-left: 20px;
+    padding: 50px 20px;
     line-height: 1.5;
     transition: background-color 0.4s, color 0.4s;
+    /* CRT phosphor glow, inherited by all text */
+    text-shadow: 0 0 4px var(--main);
 }
+
+
+/* ===== 3. CRT effect ===== */
+
+/* Full-screen layer over the page: scanlines, vignette, haze, curved edges.
+   pointer-events: none so it never blocks clicks */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1000;
+    background:
+        /* scanlines: 1px faint line every 3px */
+        repeating-linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.15) 0px,
+            rgba(0, 0, 0, 0.15) 1px,
+            transparent 1px,
+            transparent 3px
+        ),
+        /* vignette: clear center, darker edges */
+        radial-gradient(
+            ellipse at center,
+            transparent 60%,
+            rgba(0, 0, 0, 0.45) 100%
+        ),
+        /* faint green haze (--main in RGB, at 3%) */
+        linear-gradient(rgba(127, 209, 199, 0.03), rgba(127, 209, 199, 0.03));
+    /* curved screen edges */
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.6);
+    /* very slow, subtle flicker */
+    animation: crt-flicker 4s infinite;
+}
+
+@keyframes crt-flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.94; }
+}
+
+/* Light mode: lighter overlay, no flicker, no glow
+   (animation: none is needed, an animation overrides a static opacity) */
+:root:has(#theme-toggle:checked) body::after {
+    opacity: 0.4;
+    animation: none;
+}
+
+:root:has(#theme-toggle:checked) body {
+    text-shadow: none;
+}
+
+
+/* ===== 4. Typography & links ===== */
 
 /* Name: VT323 retro terminal font */
 h1 {
@@ -45,15 +129,30 @@ h1 {
     transition: color 0.4s;
 }
 
-h2 {
-    color: var(--main);
-    transition: color 0.4s;
-    font-family: "VT323", monospace;
-    font-size: 2rem;
+/* Blinking cursor after the name.
+   step-end = no fade: each keyframe value holds until the next one (on 0-50%, off 50-100%) */
+h1::after {
+    content: "_";
+    animation: cursor-blink 1s step-end infinite;
 }
 
-nav {
+@keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Section titles */
+h2 {
     font-family: "VT323", monospace;
+    color: var(--main);
+    font-size: 2rem;
+    transition: color 0.4s;
+}
+
+/* Terminal prompt before each section title */
+h2::before {
+    content: "> ";
+    color: var(--second);
 }
 
 a {
@@ -61,61 +160,68 @@ a {
     transition: background-color 0.25s, color 0.25s;
 }
 
-a:hover, a:focus-visible, a:active {
+/* Inverted highlight on hover, keyboard focus and tap */
+a:hover,
+a:focus-visible,
+a:active {
     background-color: var(--main);
     color: var(--bg);
 }
 
-/* Padding is top/bottom and left/right */
-nav a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 0.5rem 1rem;
+
+/* ===== 5. Header ===== */
+
+/* Name on the left, controls on the right, one row */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;             /* on phones, the controls can drop to a 2nd line */
+    gap: 1rem;
+}
+
+/* FR|EN, theme switch and ☰ side by side, all in VT323 (inherited) */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     font-family: "VT323", monospace;
 }
 
-/* Language toggle design */
-ul.lang-switch {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: inline-flex;
-  border: 1px solid var(--main);
-  font-family: "VT323", monospace;
+/* ===== 6. Language switch (FR | EN) ===== */
+
+/* Two links shown as one pill */
+.lang-switch {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 1px solid var(--main);
 }
 
+/* Both halves the same width: 7 characters + padding */
 .lang-switch a {
-    text-decoration: none;
     display: block;
-    padding: 10px;
+    width: calc(7ch + 1px);
+    padding: 1px;
     text-align: center;
-    width: calc(7ch + 20px);
+    text-decoration: none;
 }
 
+/* Current language = inverted */
 .lang-switch a[aria-current="page"] {
     background-color: var(--main);
     color: var(--bg);
 }
 
-article {
-    background-color: var(--panel);
-    /* TODO: smaller, equal padding for mobile */
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 1px solid var(--main);
-    transition: background-color 0.4s, border-color 0.4s;
-}
 
-/* Theme switch: the pill */
+/* ===== 7. Theme switch (dark | light) ===== */
+
+/* The pill */
 .switch {
     position: relative;
     display: inline-flex;
     border: 1px solid var(--main);
-    font-family: "VT323", monospace;
     cursor: pointer;
 }
 
@@ -131,9 +237,9 @@ article {
 .switch-text {
     position: relative;
     z-index: 1;
-    padding: 10px;
+    width: calc(7ch + 1px);
+    padding: 1px;
     text-align: center;
-    width: calc(7ch + 20px);
 }
 
 /* Sliding highlight, covers one half */
@@ -168,16 +274,107 @@ article {
     color: var(--bg);
 }
 
-/* Neofetch block */
+
+/* ===== 8. Menu (☰) ===== */
+
+/* The ☰ button: pill look, like FR|EN and the theme switch */
+nav summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(7ch + 1px);          /* 44px tap target */
+    min-height: 28px;
+    list-style: none;            /* removes the ▶ arrow (Chrome, Firefox) */
+    border: 1px solid var(--main);
+    cursor: pointer;
+}
+
+/* Removes the ▶ arrow in Safari */
+nav summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Keyboard focus: same style as the other controls */
+nav summary:focus-visible {
+    outline: 2px solid var(--second);
+}
+
+/* The anchor point: the dropdown is placed relative to this box */
+nav details {
+    position: relative;
+}
+
+/* The dropdown: floats over the page, under the ☰, aligned to its right edge */
+nav details ul {
+    position: absolute;
+    top: 100%;                   /* just below the button */
+    right: 0;                    /* right edges line up */
+    z-index: 10;                 /* above the sections, below the CRT layer (1000) */
+    min-width: 20ch;             /* wide enough so links don't wrap */
+    margin: 0;
+    padding: 0.5rem 0;
+    list-style: none;
+    background-color: var(--panel);
+    border: 1px solid var(--main);
+}
+
+/* One link per line, full width of the dropdown */
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+
+/* ===== 9. Sections & articles ===== */
+
+/* Every section = a panel, like a terminal window (the neofetch stays open) */
+main > section:not(#neofetch) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--panel);
+    border: 1px solid var(--main);
+    transition: background-color 0.4s, border-color 0.4s;
+}
+
+/* No extra space above the title inside the panel */
+main > section > h2:first-child {
+    margin-top: 0;
+}
+
+/* Items inside a panel: no second box, a left line instead */
+article {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--second);
+}
+
+
+/* ===== 10. Neofetch ===== */
+
+/* VT323 for the whole block (inherited) */
 #neofetch {
     font-family: "VT323", monospace;
 }
 
 #neofetch pre {
-   color: var(--main); 
-   overflow: auto;
+    color: var(--main);
+    overflow: auto;              /* only the ASCII scrolls on small screens, not the page */
 }
 
+/* user@host title */
+#neofetch .neofetch-title {
+    color: var(--main);
+}
+
+/* No default paragraph margins, so the title lines up with the portrait */
+#neofetch .neofetch-info p {
+    margin: 0;
+}
+
+/* Label → value rows: labels as wide as needed, values take the rest */
 #neofetch dl {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -189,6 +386,7 @@ article {
     color: var(--main);
 }
 
+/* The colon is added by CSS, keeps the HTML clean */
 #neofetch dt::after {
     content: ":";
 }
@@ -197,119 +395,59 @@ article {
     margin: 0;
 }
 
+/* Color blocks = the palette, so they follow the theme */
 #neofetch .neofetch-colors span {
     display: inline-block;
     width: 2rem;
     height: 2rem;
-    /* or var(--text) */
     border: 1px solid var(--main);
 }
 
-#neofetch .neofetch-colors span:nth-child(1) {
-    background-color: var(--bg);
-}
+#neofetch .neofetch-colors span:nth-child(1) { background-color: var(--bg); }
+#neofetch .neofetch-colors span:nth-child(2) { background-color: var(--panel); }
+#neofetch .neofetch-colors span:nth-child(3) { background-color: var(--main); }
+#neofetch .neofetch-colors span:nth-child(4) { background-color: var(--second); }
+#neofetch .neofetch-colors span:nth-child(5) { background-color: var(--text); }
 
-#neofetch .neofetch-colors span:nth-child(2) {
-    background-color: var(--panel);
-}
-
-#neofetch .neofetch-colors span:nth-child(3) {
-    background-color: var(--main);
-}
-
-#neofetch .neofetch-colors span:nth-child(4) {
-    background-color: var(--second);
-}
-
-#neofetch .neofetch-colors span:nth-child(5) {
-    background-color: var(--text);
-}
-
-.neofetch-title {
-    color: var(--main);
-}
-
-/* Neofetch info: no default paragraph margins, so the title lines up with the portrait */
-#neofetch .neofetch-info p {
-    margin: 0;
-}
-
-h2::before {
-    content: "> ";
-    color: var(--second);
-}
-
-/* Blinking cursor for terminal look */
-h1::after {
-    content: "_";
-    animation: cursor-blink 1s steps(2) infinite;
-}
-
-@keyframes cursor-blink {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-/* Contact form buttons: terminal style + inverted highlight */
-#contact-form input[type="submit"], #contact-form input[type="reset"] {
-    font-family: "VT323", monospace;
-    border: 1px solid var(--main);
-    background: transparent;
-    color: var(--main);
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-    margin-top: 1.25rem;
-    transition: background-color 0.25s, color 0.25s;
-}
-
-#contact-form input[type="submit"]:hover,
-#contact-form input[type="submit"]:focus-visible,
-#contact-form input[type="reset"]:hover,
-#contact-form input[type="reset"]:focus-visible {
-    background-color: var(--main);
-    color: var(--bg);
-}
-
-/* Contact form: each label on its own line, above its field */
-#contact-form label {
-    display: block;
-    margin-top: 1rem;
-}
-
-/* Contact form fields: own line, themed with the palette */
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form input[type="tel"],
-#contact-form textarea {
-    display: block;
-    width: 100%;
-    padding: 0.5rem;
-    background-color: var(--panel);
-    color: var(--text);
-    border: 1px solid var(--main);
+/* Terminal typing: "neofetch" types itself once, just after the page loads,
+   then the underscore cursor keeps blinking, like the one after the name.
+   The box grows 1 character per step; overflow: hidden hides the rest */
+#neofetch kbd {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
     font-family: inherit;
+    width: 1ch;                  /* starts with just the cursor */
+    padding-right: 1ch;          /* space reserved for the cursor */
+    /* the cursor: a 1ch x 2px bar in the bottom right corner (underscore, like the h1) */
+    background: linear-gradient(var(--main), var(--main)) no-repeat right bottom / 1ch 2px;
+    animation:
+        type-in 0.8s steps(8, end) 0.3s forwards,
+        underscore-blink 1s step-end 1.1s infinite;
 }
 
-/* Tablet and up */
-@media (min-width:768px) {
-    #neofetch {display: flex; flex-wrap: wrap; column-gap: 2rem; align-items: flex-start;}
-    #neofetch > p {flex-basis: 100%;}
-    #neofetch .neofetch-info {flex: 1; min-width: 0; margin: 0;}
+/* 8 letters in "neofetch" + 1ch for the cursor */
+@keyframes type-in {
+    to { width: 9ch; }
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
-    header, main {max-width: 60rem; margin: 0 auto;}
+/* Starts when the typing ends (0.3s + 0.8s = 1.1s); same rhythm as the h1 cursor */
+@keyframes underscore-blink {
+    0%, 100% { background-size: 1ch 2px; }
+    50% { background-size: 0 0; }
 }
 
-/* Portrait: ASCII on top, color photo revealed on hover, click or keyboard focus */
+
+/* ===== 11. Portrait & glitch reveal ===== */
+
+/* ASCII on top, color photo revealed on hover, tap or keyboard focus */
 #neofetch .portrait {
     position: relative;
     display: inline-block;
-    cursor: pointer;
     flex-shrink: 0;
     overflow: hidden;
+    cursor: pointer;
 }
 
 /* The ASCII sets the size of the portrait and hides the photo behind it */
@@ -317,11 +455,11 @@ h1::after {
     position: relative;
     z-index: 1;
     margin: 0;
-    line-height: 1.5;
-    background-color: var(--bg);
-    transition: opacity 0.6s;
     font-family: monospace;
     font-size: 0.26rem;
+    line-height: 1.5;
+    background-color: var(--bg);
+    transition: opacity 0.15s;
 }
 
 /* The photo fills exactly the ASCII's space, underneath it */
@@ -343,4 +481,178 @@ h1::after {
 /* Keyboard users see where the focus is */
 #neofetch .portrait:focus-visible {
     outline: 2px solid var(--second);
+}
+
+/* Photo glitch: one band of the photo per frame, uneven timings and shifts.
+   steps(1, end) = no smooth motion, the image jumps from frame to frame */
+#neofetch .portrait:hover img,
+#neofetch .portrait:focus img {
+    animation: image-glitch-in 0.6s steps(1, end);
+}
+
+@keyframes image-glitch-in {
+    0%   { clip-path: inset(42% 0 51% 0); transform: translateX(-9px); }
+    7%   { clip-path: inset(8% 0 88% 0);  transform: translateX(4px); }
+    13%  { clip-path: inset(63% 0 12% 0); transform: translateX(-2px) skewX(8deg); }
+    21%  { clip-path: inset(0 0 94% 0);   transform: translateX(11px); }
+    27%  { clip-path: inset(28% 0 40% 0); transform: translateX(-6px); }
+    38%  { clip-path: inset(77% 0 3% 0);  transform: translateX(3px) skewX(-5deg); }
+    44%  { clip-path: inset(15% 0 79% 0); transform: translateX(-12px); }
+    56%  { clip-path: inset(50% 0 30% 0); transform: translateX(5px); }
+    61%  { clip-path: inset(4% 0 60% 0);  transform: translateX(-3px); }
+    73%  { clip-path: inset(35% 0 25% 0); transform: translateX(2px); }
+    84%  { clip-path: inset(0 0 12% 0);   transform: translateX(-1px); }
+    100% { clip-path: inset(0 0 0 0);     transform: translateX(0); }
+}
+
+/* Palette glitch: a color layer over the portrait, invisible at rest.
+   screen blends the color into the photo instead of covering it */
+#neofetch .portrait::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    mix-blend-mode: screen;
+}
+
+/* Light mode: darker palette, so multiply tints better than screen */
+:root:has(#theme-toggle:checked) #neofetch .portrait::after {
+    mix-blend-mode: multiply;
+}
+
+#neofetch .portrait:hover::after,
+#neofetch .portrait:focus::after {
+    animation: palette-glitch 0.6s steps(1, end);
+}
+
+/* Same timing as the photo, different bands, so they never line up.
+   Max 2 color flashes at low opacity: stays under WCAG 2.3.1 (3 flashes per second) */
+@keyframes palette-glitch {
+    0%   { opacity: 0.5;  background-color: var(--main);   clip-path: inset(10% 0 82% 0); transform: translateX(7px); }
+    7%   { opacity: 0.4;  background-color: var(--second); clip-path: inset(55% 0 30% 0); transform: translateX(-4px); }
+    21%  { opacity: 0; }
+    44%  { opacity: 0.45; background-color: var(--second); clip-path: inset(33% 0 58% 0); transform: translateX(8px); }
+    56%  { opacity: 0.3;  background-color: var(--main);   clip-path: inset(80% 0 5% 0);  transform: translateX(-2px); }
+    73%, 100% { opacity: 0; }
+}
+
+
+/* ===== 12. Contact form ===== */
+
+/* Each label on its own line, above its field */
+#contact-form label {
+    display: block;
+    margin-top: 1rem;
+}
+
+/* Fields: own line, themed with the palette */
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-family: inherit;
+    color: var(--text);
+    background-color: var(--panel);
+    border: 1px solid var(--main);
+}
+
+/* Buttons: terminal style */
+#contact-form input[type="submit"],
+#contact-form input[type="reset"] {
+    margin-top: 1.25rem;
+    padding: 0.5rem 1rem;
+    font-family: "VT323", monospace;
+    font-size: 1.25rem;
+    color: var(--main);
+    background: transparent;
+    border: 1px solid var(--main);
+    cursor: pointer;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+/* Buttons: inverted highlight, like the links */
+#contact-form input[type="submit"]:hover,
+#contact-form input[type="submit"]:focus-visible,
+#contact-form input[type="reset"]:hover,
+#contact-form input[type="reset"]:focus-visible {
+    background-color: var(--main);
+    color: var(--bg);
+}
+
+
+/* ===== 13. Footer ===== */
+
+/* Back-to-top link, centered, terminal font */
+footer {
+    font-family: "VT323", monospace;
+    text-align: center;
+}
+
+
+/* ===== 14. Reduced motion =====
+   Placed after all the animations on purpose: with equal specificity, the last rule wins.
+   Selectors match the :hover / :focus rules, otherwise those (more specific) would win. */
+@media (prefers-reduced-motion: reduce) {
+    /* Links jump instead of scrolling smoothly */
+    html {
+        scroll-behavior: auto;
+    }
+    /* No CRT flicker */
+    body::after {
+        animation: none;
+    }
+    /* No blinking cursor after the name: it stays visible */
+    h1::after {
+        animation: none;
+    }
+    /* No typing: show the word right away (width: 1ch would hide it) */
+    #neofetch kbd {
+        animation: none;
+        width: auto;
+        padding-right: 0;
+        background: none;
+    }
+    /* No glitch: the photo just appears */
+    #neofetch .portrait:hover img,
+    #neofetch .portrait:focus img,
+    #neofetch .portrait:hover::after,
+    #neofetch .portrait:focus::after {
+        animation: none;
+    }
+}
+
+
+/* ===== 15. Responsive (mobile first) ===== */
+
+/* Tablet and up: neofetch side by side (portrait left, info right) */
+@media (min-width: 768px) {
+    #neofetch {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 2rem;
+        align-items: flex-start;
+    }
+    /* The prompt line takes a full row above */
+    #neofetch > p {
+        flex-basis: 100%;
+    }
+    #neofetch .neofetch-info {
+        flex: 1;
+        min-width: 0;
+        margin: 0;
+    }
+}
+
+/* Desktop: readable line length, centered */
+@media (min-width: 1024px) {
+    header,
+    main {
+        max-width: 60rem;
+        margin: 0 auto;
+    }
 }

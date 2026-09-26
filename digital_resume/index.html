@@ -9,29 +9,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+    <body>
     <header>
-        <h1>Chase Angelo RODRIQUES ROQUE</h1>
-        <p>Étudiant en cybersécurité</p>
-        <ul class="lang-switch">
-            <li><a href="index.html" hreflang="fr" aria-current="page">FR</a></li>
-            <li><a href="en/index.html" hreflang="en">EN</a></li>
-        </ul>
-        <label class="switch">
-            <input type="checkbox" id="theme-toggle" aria-label="Mode clair">
-            <span class="slider"></span>
-            <span class="switch-text switch-dark">SOMBRE</span>
-            <span class="switch-text switch-light">CLAIR</span>
-        </label>
-        <nav>
-            <ul>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#experience">Expériences</a></li>
-                <li><a href="#education">Formation</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#contact-form">Me contacter</a></li>
+        <div class="id">
+            <h1>Chase Angelo RODRIQUES ROQUE</h1>
+            <p>Étudiant en cybersécurité</p> 
+        </div>
+        <div class="header-controls">
+            <ul class="lang-switch">
+                <li><a href="index.html" hreflang="fr" aria-current="page">FR</a></li>
+                <li><a href="en/index.html" hreflang="en">EN</a></li>
             </ul>
-        </nav>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle" aria-label="Mode clair">
+                <span class="slider"></span>
+                <span class="switch-text switch-dark">SOMBRE</span>
+                <span class="switch-text switch-light">CLAIR</span>
+            </label>
+            <nav>
+                <details>
+                    <summary aria-label="Menu">☰</summary>
+                    <ul>
+                        <li><a href="#profile">Profil</a></li>
+                        <li><a href="#projects">Projets</a></li>
+                        <li><a href="#experience">Expériences</a></li>
+                        <li><a href="#education">Formation</a></li>
+                        <li><a href="#skills">Compétences</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#volunteering">Bénévolat</a></li>
+                        <li><a href="#languages">Langues</a></li>
+                        <li><a href="#interests">Intérêts</a></li>
+                        <li><a href="#contact-form">Me contacter</a></li>
+                    </ul>
+                </details>
+            </nav>    
+        </div>
     </header>
     <main>
         <section id="neofetch">
@@ -112,9 +124,9 @@
                 <p aria-hidden="true">-------------</p>
                 <dl>
                     <dt>OS</dt>
-                    <dd>Étudiant en cybersécurité · MSc Epitech</dd>
+                    <dd>Étudiant en cybersécurité · Master of Science Epitech</dd>
                     <dt>Host</dt>
-                    <dd>Epitech Marseille · 2026–2029</dd>
+                    <dd>Epitech Marseille · 2026 - 2029</dd>
                     <dt>Kernel</dt>
                     <dd>Linguiste → Sécurité v2.0</dd>
                     <dt>Uptime</dt>
@@ -153,13 +165,13 @@
         </section>
         <section id="profile">
             <h2>Profil</h2>
-            <p>Étudiant en cybersécurité, ancien enseignant d’anglais pour les informaticiens, passionné de Linux, de logiciel libre et de la sécurité des données — orientation cybersécurité, IA et Big Data. Je recherche une alternance en cybersécurité pour mettre en pratique mes compétences en systèmes et réseaux, avec la rigueur et la pédagogie acquises en enseignement.</p>
+            <p>Étudiant en cybersécurité, ancien enseignant d'anglais pour les informaticiens, passionné de Linux, de logiciel libre et de la sécurité des données — orientation cybersécurité, IA et Big Data. Je recherche une alternance en cybersécurité pour mettre en pratique mes compétences en systèmes et réseaux, avec la rigueur et la pédagogie acquises en enseignement.</p>
         </section>
         <section id="projects">
             <h2>Projets</h2>
             <article>
                 <h3>Homelab Linux</h3>
-                <p>NAS personnel - 2026</p>
+                <p>NAS personnel · 2026 - aujourd'hui</p>
                 <ul>
                     <li>Installation et durcissement d'un serveur Linux (SSH par clé, pare-feu, mises à jour)</li>
                     <li>Mise en place d'un réseau virtuel pour tester outils et configurations</li>
@@ -174,7 +186,7 @@
             </article>
             <article>
                 <h3>IA auto-hébergée</h3>
-                <p>Projet personnel - 2026</p>
+                <p>Projet personnel · 2026 - aujourd'hui</p>
                 <ul>
                     <li>Déploiement et comparaison de LLM en local (Ollama, Jan, GPT4All) : données traitées sans cloud ni fuite vers des tiers</li>
                     <li>Accès aux fichiers restreint selon le principe du moindre privilège</li>
@@ -186,7 +198,7 @@
             <h2>Expériences</h2>
             <article>
                 <h3>Enseignant - Anglais scientifique</h3>
-                <p>Aix-Marseille Université, Marseille - octobre 2022 à août 2025</p>
+                <p>Aix-Marseille Université, Marseille · octobre 2022 - août 2025</p>
                 <ul>
                     <li>Enseignement de l'anglais technique pour étudiants en sciences/informatique : création du cursus et du matériel, gestion des notes et activités pédagogiques</li>
                     <li>Recherche en matière scientifique pour personnaliser les cursus en fonction du domaine (ex : IoT, cybersécurité, réseaux et télécommunications)</li>
@@ -197,13 +209,13 @@
             <h2>Formation</h2>
             <article>
                 <h3>Master of Science en Cybersécurité et IA</h3>
-                <p>Epitech, Marseille - 2026 à 2029</p>
+                <p>Epitech, Marseille · 2026 - 2029</p>
             </article>
             <article>
                 <h3>Bachelor of Arts - Linguistique appliquée et plurilinguisme (mention Honneur)</h3>
-                <p>University of California, Santa Cruz - 2016 à 2020</p>
+                <p>University of California, Santa Cruz · 2016 - 2020</p>
                 <ul>
-                    <li>Mobilité internationale : relations internationales et culture en Asie du Sud-Ouest et Afrique du Nord (Sciences Po Lyon, Université Lumière Lyon 2, Université de Genève), 2019 à 2020</li>
+                    <li>Mobilité internationale : relations internationales et culture en Asie du Sud-Ouest et Afrique du Nord (Sciences Po Lyon, Université Lumière Lyon 2, Université de Genève) · 2019 – 2020</li>
                 </ul>
             </article>
         </section>
@@ -222,8 +234,8 @@
         <section id="certifications">
             <h2>Certifications</h2>
             <ul>
-                <li><a href="https://www.cisco.com/site/us/en/learn/training-certifications/certifications/support-technician/index.html#accordion-126b124179-item-7335c2761d">Cisco Certified Support Technician (CCST) Cybersecurity</a> (en cours)</li>
-                <li>Certification en Langue des Signes Française - Niveau 1, Aix-Marseille Université, printemps 2024</li>
+                <li><a href="https://www.cisco.com/site/us/en/learn/training-certifications/certifications/support-technician/index.html">Cisco Certified Support Technician (CCST) Cybersecurity</a> (en cours)</li>
+                <li>Certification en langue des signes française (LSF) - niveau 1 · Aix-Marseille Université · printemps 2024</li>
             </ul>
         </section>
         <section id="volunteering">
@@ -272,8 +284,9 @@
                 <input type="reset" value="> effacer">
             </form>
         </section>
+
     </main>
     <footer>
+        <p><a href="#">↑ Haut de page ↑</a></p>
+        <p>Chase Angelo RODRIQUES ROQUE - 2026 - Fait en HTML/CSS</p>
     </footer>
-</body>
-</html>
