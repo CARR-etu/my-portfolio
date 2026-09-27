@@ -129,3 +129,23 @@ profile.hackthebox.com/profile/01a0ae73-4e22-7148-8dfc-8bda61d98d81?utm_medium=c
 ## > Interests
 
 Electronics and computer tinkering, free software, retro gaming, DJing and music production, radio, science fiction, bike touring and hiking
+
+
+
+
+
+Meshtastic Radio Node (LoRa Mesh Network)
+Personal project · 2026 – Present
+
+Built and configured a Meshtastic node (LoRa board, antenna, power supply)
+Flashed the firmware and set up the network: region and frequency (868 MHz in Europe), channels, node role
+Encrypted off-grid communication with no internet or carrier: channel keys, node-to-node messaging
+Tested range and reliability across different locations and antennas
+
+
+
+Retro Handheld Console (Raspberry Pi)
+Personal project · [year]
+
+Built a handheld console from a Raspberry Pi Zero 2 W and a gamepad HAT with a screen
+Installed and configured RetroPie on Linux: system image, emulators, button mapping

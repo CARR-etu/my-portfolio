@@ -178,6 +178,10 @@ header {
     align-items: baseline;
     flex-wrap: wrap;             /* on phones, the controls can drop to a 2nd line */
     gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--bg);
 }
 
 /* FR|EN, theme switch and ☰ side by side, all in VT323 (inherited) */
@@ -186,6 +190,10 @@ header {
     align-items: center;
     gap: 1rem;
     font-family: "VT323", monospace;
+}
+
+section {
+    scroll-margin-top: 10rem;
 }
 
 /* ===== 6. Language switch (FR | EN) ===== */
@@ -645,6 +653,18 @@ footer {
         flex: 1;
         min-width: 0;
         margin: 0;
+    }
+    header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;             /* on phones, the controls can drop to a 2nd line */
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--bg);
+    width: 100%;
     }
 }
 
