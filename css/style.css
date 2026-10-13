@@ -359,6 +359,9 @@ article {
     border-left: 2px solid var(--second);
 }
 
+main:has(section:target) > section:not(:target) {
+    display: none;
+}
 
 /* ===== 10. Neofetch ===== */
 

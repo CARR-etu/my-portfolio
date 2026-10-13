@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
     <body>
     <header>
@@ -17,8 +18,8 @@
         </div>
         <div class="header-controls">
             <ul class="lang-switch">
-                <li><a href="index.html" hreflang="fr" aria-current="page">FR</a></li>
-                <li><a href="en/index.html" hreflang="en">EN</a></li>
+                <li><button type="button" data-lang="fr" aria-pressed="true">FR</button></li>
+                <li><button type="button" data-lang="en" aria-pressed="false">EN</button></li>
             </ul>
             <label class="switch">
                 <input type="checkbox" id="theme-toggle" aria-label="Mode clair">
@@ -165,7 +166,7 @@
             </div>
         </section>
         <section id="profile">
-            <h2>Profil</h2>
+            <h2 data-i18n="profile.title">Profil</h2>
             <p>Étudiant en cybersécurité, ancien enseignant d'anglais pour les informaticiens, passionné de Linux, de logiciel libre et de la sécurité des données — orientation cybersécurité, IA et Big Data. Je recherche une alternance en cybersécurité pour mettre en pratique mes compétences en systèmes et réseaux, avec la rigueur et la pédagogie acquises en enseignement.</p>
         </section>
         <section id="projects">
