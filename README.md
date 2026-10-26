@@ -10,7 +10,8 @@ The design is a retro terminal: a `neofetch`-style introduction, an ASCII-art po
 
 ## Features
 
-- **Bilingual (FR / EN) on a single page**: one HTML file, translations stored in `js/translations.js`, language switched without reloading the page.
+- **Bilingual (FR / EN) on a single page**: one HTML file, translations stored in `js/translations.js`, language switched without reloading the page. Text, attributes (`alt`, `aria-label`, button labels) and the tab title are all translated.
+- **Language remembered between visits** with `localStorage`.
 - **Section filtering**: choosing a section in the menu shows only that section; with no section selected, everything is visible. Done in pure CSS with `:target` and `:has()`.
 - **Menu that closes itself** after a section is chosen (JavaScript).
 - **Dark / light theme** in pure CSS (a checkbox and `:has()`).
@@ -50,6 +51,11 @@ The design is a retro terminal: a `neofetch`-style introduction, an ASCII-art po
    en: { "profile.title": "Profile" }
    ```
 3. `setLanguage(lang)` in `js/main.js` finds every `[data-i18n]` element, replaces its text with the right translation, and updates `<html lang>` and the active button.
+4. Attributes use a second marker, `data-i18n-attr="attribute:key"`, read with `setAttribute`:
+   ```html
+   <img src="assets/photo-color.jpg" alt="..." data-i18n-attr="alt:attr.photo">
+   ```
+5. The choice is saved with `localStorage.setItem("lang", lang)` and applied again when the page loads.
 
 Design choices:
 - **The French text stays in the HTML**, so the page is still readable if JavaScript doesn't load.
@@ -72,10 +78,44 @@ Hosted with **GitHub Pages**, deployed from the `main` branch, root folder.
 
 ---
 
+## Project history
+
+### v1: digital resume (Epitech web piscine)
+
+The first version was a mini-project with one rule: **HTML and CSS only, no JavaScript**.
+
+- Two separate pages: `index.html` in French and `en/index.html` in English, linked by FR / EN links.
+- Every section always visible, one long scroll.
+- A `<details>` menu that stayed open after choosing a section.
+- Dark / light theme already in pure CSS (a hidden checkbox and `:has()`).
+
+### First follow-up: feedback
+
+For the portfolio version, JavaScript is allowed. The first follow-up gave five points:
+
+1. The ASCII art: kept as is (positive feedback).
+2. Close the menu with JS when a section is chosen.
+3. Use i18n instead of one page per language.
+4. Show only the active section, and all sections when none is active.
+5. Add an interests section with personal projects (DJ, radio, live coding).
+
+### v2: what changed, and why
+
+| Before | Problem | Now |
+|---|---|---|
+| Two HTML files, one per language | Every change had to be made twice, and the versions drifted apart (the English page was missing a project and had different wording). Switching language loaded a new page, which reset the theme. | **One page + one dictionary** (`translations.js`). Each text exists once per language, and switching is instant. |
+| Translation of text content only (`textContent`) | `textContent` only changes what is *between* the tags. In English mode, the photo's `alt`, the theme switch's `aria-label`, the form buttons and the tab title stayed in French, so screen reader users and the browser tab still got French. | **Attributes translated too**, with `data-i18n-attr` and `setAttribute`, plus `document.title`. |
+| Language reset to French on every reload | A visitor who chose English had to choose again on each visit, and on each page once the site has several pages. | **Choice saved** with `localStorage`. |
+| Menu stayed open after a click | It covered the section the visitor had just chosen. | **Closes itself** (JS click listener with event delegation). |
+| All sections always visible | Long page, hard to focus on one part. | **Section filtering** in pure CSS (`:target` + `:has()`): lighter than JS, works without JS, and the browser's back button works on its own. |
+| Content written for the piscine | Out of date compared with the current CV. | **Content updated** from the cybersecurity CV, sections reordered to match it. |
+
+---
+
 ## Roadmap
 
-- [ ] Translate attributes (`<title>`, image `alt`, `aria-label`, form button labels)
-- [ ] Remember the chosen language with `localStorage`
+- [x] Translate attributes (`<title>`, image `alt`, `aria-label`, form button labels)
+- [x] Remember the chosen language with `localStorage`
 - [ ] Interests page (DJ, radio, live coding)
 - [ ] Detailed technical projects page
 
