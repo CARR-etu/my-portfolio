@@ -23,7 +23,7 @@
                 <li><button type="button" data-lang="en" aria-pressed="false">EN</button></li>
             </ul>
             <label class="switch">
-                <input type="checkbox" id="theme-toggle" aria-label="Mode clair">
+                <input type="checkbox" id="theme-toggle" aria-label="Mode clair" data-i18n-attr="aria-label:attr.theme">
                 <span class="slider"></span>
                 <span class="switch-text switch-dark" data-i18n="theme.dark">SOMBRE</span>
                 <span class="switch-text switch-light" data-i18n="theme.light">CLAIR</span>
@@ -52,7 +52,7 @@
         <section id="neofetch">
             <p><code>[chase@epitech ~]$ <kbd>neofetch</kbd></code></p>
             <div class="portrait" tabindex="0">
-                <img src="assets/photo-color.jpg" alt="Photo de Chase Angelo RODRIQUES ROQUE" width="400" height="400">
+                <img src="assets/photo-color.jpg" alt="Photo de Chase Angelo RODRIQUES ROQUE" width="400" height="400" data-i18n-attr="alt:attr.photo">
                 <pre aria-hidden="true">
 ..............................................................................................................
 ..............................................................................................................
@@ -338,8 +338,8 @@
                 <label for="message" data-i18n="contact.message">Questions / Commentaires :</label>
                 <textarea id="message" name="message" required></textarea>
 
-                <input type="submit" value="> envoyer">
-                <input type="reset" value="> effacer">
+                <input type="submit" value="> envoyer" data-i18n-attr="value:attr.submit">
+                <input type="reset" value="> effacer" data-i18n-attr="value:attr.reset">
             </form>
         </section>
 
@@ -348,3 +348,5 @@
         <p><a href="#" data-i18n="footer.top">↑ Haut de page ↑</a></p>
         <p data-i18n="footer.credits">Chase Angelo RODRIQUES ROQUE - 2026 - Fait en HTML/CSS/JS</p>
     </footer>
+    </body>
+</html>
