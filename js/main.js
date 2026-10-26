@@ -1,15 +1,3 @@
-
-
-
-const translations = {
-    fr: {
-        "profile.title": "Profil",
-    },
-    en: {
-        "profile.title": "Profile",
-    },
-};
-
 function setLanguage(lang) {
     document.querySelectorAll("[data-i18n]").forEach((element) => {
         const key = element.dataset.i18n;
@@ -18,8 +6,6 @@ function setLanguage(lang) {
     document.documentElement.lang = lang;
 }
 
-
-
 const menu = document.querySelector("nav details");
 
 menu.addEventListener("click", (event) => {
@@ -27,7 +13,6 @@ menu.addEventListener("click", (event) => {
         menu.open = false;
     }
 });
-
 
 const langSwitch = document.querySelector(".lang-switch");
 

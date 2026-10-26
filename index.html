@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <script src="js/translations.js" defer></script>
+   <script src="js/main.js" defer></script>
 </head>
     <body>
     <header>
         <div class="id">
             <h1>Chase Angelo RODRIQUES ROQUE</h1>
-            <p>Étudiant en cybersécurité</p> 
+            <p data-i18n="header.subtitle">Étudiant en cybersécurité</p> 
         </div>
         <div class="header-controls">
             <ul class="lang-switch">
@@ -24,24 +25,24 @@
             <label class="switch">
                 <input type="checkbox" id="theme-toggle" aria-label="Mode clair">
                 <span class="slider"></span>
-                <span class="switch-text switch-dark">SOMBRE</span>
-                <span class="switch-text switch-light">CLAIR</span>
+                <span class="switch-text switch-dark" data-i18n="theme.dark">SOMBRE</span>
+                <span class="switch-text switch-light" data-i18n="theme.light">CLAIR</span>
             </label>
             <nav>
                 <details>
                     <summary aria-label="Menu">☰</summary>
                     <ul>
                         <li><a href="#">neofetch_</a></li>
-                        <li><a href="#profile">Profil</a></li>
-                        <li><a href="#education">Formation</a></li>
-                        <li><a href="#projects">Projets</a></li>
-                        <li><a href="#experience">Expériences</a></li>
-                        <li><a href="#volunteering">Bénévolat</a></li>
-                        <li><a href="#skills">Compétences</a></li>
-                        <li><a href="#certifications">Certifications</a></li>
-                        <li><a href="#languages">Langues</a></li>
-                        <li><a href="#interests">Intérêts</a></li>
-                        <li><a href="#contact-form">Me contacter</a></li>
+                        <li><a href="#profile" data-i18n="nav.profile">Profil</a></li>
+                        <li><a href="#education" data-i18n="nav.education">Formation</a></li>
+                        <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
+                        <li><a href="#experience" data-i18n="nav.experience">Expériences</a></li>
+                        <li><a href="#volunteering" data-i18n="nav.volunteering">Bénévolat</a></li>
+                        <li><a href="#skills" data-i18n="nav.skills">Compétences</a></li>
+                        <li><a href="#certifications" data-i18n="nav.certifications">Certifications</a></li>
+                        <li><a href="#languages" data-i18n="nav.languages">Langues</a></li>
+                        <li><a href="#interests" data-i18n="nav.interests">Intérêts</a></li>
+                        <li><a href="#contact-form" data-i18n="nav.contact-form">Me contacter</a></li>
                     </ul>
                 </details>
             </nav>    
@@ -126,28 +127,28 @@
                 <p aria-hidden="true">-------------</p>
                 <dl>
                     <dt>OS</dt>
-                    <dd>Étudiant en cybersécurité · Master of Science, Epitech</dd>
+                    <dd data-i18n="neofetch.os">Étudiant en cybersécurité · Master of Science, Epitech</dd>
                     <dt>Host</dt>
                     <dd>Epitech Marseille · 2026 - 2029</dd>
                     <dt>Kernel</dt>
-                    <dd>Linguiste → Sécurité v2.0</dd>
+                    <dd data-i18n="neofetch.kernel">Linguiste → Sécurité v2.0</dd>
                     <dt>Uptime</dt>
-                    <dd>Alternance en cybersécurité & cloud · disponible janvier 2027 · 4 semaines / 2 semaines · jusqu'à 33 mois</dd>
+                    <dd data-i18n="neofetch.uptime">Alternance en cybersécurité & cloud · disponible janvier 2027 · 4 semaines / 2 semaines · jusqu'à 33 mois</dd>
                     <dt>Packages</dt>
-                    <dd>11 installés : Linux, Bash, Python, SQL, HTML, CSS, JavaScript, Java, Docker, Git, Nmap</dd>
+                    <dd data-i18n="neofetch.packages">11 installés : Linux, Bash, Python, SQL, HTML, CSS, JavaScript, Java, Docker, Git, Nmap</dd>
                     <dt>Shell</dt>
                     <dd>bash</dd>
                     <dt>DE</dt>
-                    <dd>Langues : EN · FR · ES · AR · LSF</dd>
+                    <dd data-i18n="neofetch.de">Langues : EN · FR · ES · AR · LSF</dd>
                     <dt>Terminal</dt>
-                    <dd>Projets : homelab Linux, IA auto-hébergée, Meshtastic, job board, Hack The Box</dd>
+                    <dd data-i18n="neofetch.terminal">Projets : homelab Linux, IA auto-hébergée, Meshtastic, job board, Hack The Box</dd>
                     <dt>Memory</dt>
-                    <dd>Hack The Box : Lvl 6</dd>
+                    <dd data-i18n="neofetch.memory">Hack The Box : Lvl 6</dd>
                     <dt>Local IP</dt>
                     <dd>Marseille · Aix · Montpellier</dd>
-                    <dt>E-mail</dt>
+                    <dt data-i18n="neofetch.email">E-mail</dt>
                     <dd><a href="mailto:chase-angelo.rodriques-roque@epitech.eu">chase-angelo.rodriques-roque@epitech.eu</a></dd>
-                    <dt>Téléphone</dt>
+                    <dt data-i18n="neofetch.phone">Téléphone</dt>
                     <dd><a href="tel:+33---------">-- -- -- -- --</a></dd>
                     <dt>LinkedIn</dt>
                     <dd><a href="https://linkedin.com/in/carodriquesroque/">linkedin.com/in/carodriquesroque/</a></dd>
@@ -167,174 +168,174 @@
         </section>
         <section id="profile">
             <h2 data-i18n="profile.title">Profil</h2>
-            <p>Ancien enseignant d'anglais technique en reconversion vers la cybersécurité, passionné de Linux et de logiciel libre. Je recherche dans le cadre de mon Master au sein d'Epitech une alternance en cybersécurité (SOC, GRC, test d'intrusion) pour appliquer mes compétences systèmes et réseaux avec rigueur et pédagogie.</p>
+            <p data-i18n="profile.text">Ancien enseignant d'anglais technique en reconversion vers la cybersécurité, passionné de Linux et de logiciel libre. Je recherche dans le cadre de mon Master au sein d'Epitech une alternance en cybersécurité (SOC, GRC, test d'intrusion) pour appliquer mes compétences systèmes et réseaux avec rigueur et pédagogie.</p>
         </section>
         <section id="education">
-            <h2>Formation</h2>
+            <h2 data-i18n="education.title">Formation</h2>
             <article>
-                <h3>Master of Science - Cybersécurité & Cloud (3<sup>e</sup> année, Pré-MSc)</h3>
+                <h3><span data-i18n="education.msc.title">Master of Science - Cybersécurité & Cloud</span> (3<sup data-i18n="education.msc.ordinal">e</sup> <span data-i18n="education.msc.year">année, Pré-MSc</span>)</h3>
                 <p>Epitech, Marseille · 2026 - 2029</p>
                 <ul>
-                    <li>Groupe cybersécurité : cours de test d'intrusion (Exegol, Nmap, élévation de privilèges Windows)</li>
-                    <li>Programme : web, Java, DevOps (Docker, CI/CD), système & réseau, sécurité offensive</li>
+                    <li data-i18n="education.msc.item1">Groupe cybersécurité : cours de test d'intrusion (Exegol, Nmap, élévation de privilèges Windows)</li>
+                    <li data-i18n="education.msc.item2">Programme : web, Java, DevOps (Docker, CI/CD), système & réseau, sécurité offensive</li>
                 </ul>
             </article>
             <article>
-                <h3>Bachelor of Arts - Linguistique appliquée et plurilinguisme (Honors)</h3>
+                <h3 data-i18n="education.ba.title">Bachelor of Arts - Linguistique appliquée et plurilinguisme (Honors)</h3>
                 <p>University of California, Santa Cruz · 2016 - 2020</p>
                 <ul>
-                    <li>Mobilité internationale (Sciences Po Lyon, Lyon 2, Université de Genève) · 2019 - 2020
+                    <li><span data-i18n="education.ba.mobility">Mobilité internationale (Sciences Po Lyon, Lyon 2, Université de Genève) · 2019 - 2020</span>
                         <ul>
-                            <li>Relations internationales et culture en Asie du Sud-Ouest et Afrique du Nord</li>
+                            <li data-i18n="education.ba.focus">Relations internationales et culture en Asie du Sud-Ouest et Afrique du Nord</li>
                         </ul>
                     </li>
                 </ul>
             </article>
         </section>
         <section id="projects">
-            <h2>Projets</h2>
+            <h2 data-i18n="projects.title">Projets</h2>
             <article>
-                <h3>Homelab Linux</h3>
-                <p>Projet personnel · 2026 - aujourd'hui</p>
+                <h3 data-i18n="projects.homelab.title">Homelab Linux</h3>
+                <p data-i18n="projects.homelab.meta">Projet personnel · 2026 - aujourd'hui</p>
                 <ul>
-                    <li>Durcissement d'un serveur Linux (NAS) : SSH par clé, pare-feu, gestion des correctifs</li>
-                    <li>Labo virtualisé (Kali Linux, Exegol sous Docker) pour tests de sécurité</li>
+                    <li data-i18n="projects.homelab.item1">Durcissement d'un serveur Linux (NAS) : SSH par clé, pare-feu, gestion des correctifs</li>
+                    <li data-i18n="projects.homelab.item2">Labo virtualisé (Kali Linux, Exegol sous Docker) pour tests de sécurité</li>
                 </ul>
             </article>
             <article>
-                <h3>IA auto-hébergée</h3>
-                <p>Projet personnel · 2026 - aujourd'hui</p>
+                <h3 data-i18n="projects.ai.title">IA auto-hébergée</h3>
+                <p data-i18n="projects.ai.meta">Projet personnel · 2026 - aujourd'hui</p>
                 <ul>
-                    <li>LLM en local (Ollama, Jan, GPT4All) : confidentialité des données, sans cloud</li>
-                    <li>Gestion des accès selon le principe du moindre privilège</li>
+                    <li data-i18n="projects.ai.item1">LLM en local (Ollama, Jan, GPT4All) : confidentialité des données, sans cloud</li>
+                    <li data-i18n="projects.ai.item2">Gestion des accès selon le principe du moindre privilège</li>
                 </ul>
             </article>
             <article>
-                <h3>Nœud Meshtastic (réseau maillé LoRa)</h3>
-                <p>Projet personnel · 2026 - aujourd'hui</p>
+                <h3 data-i18n="projects.meshtastic.title">Nœud Meshtastic (réseau maillé LoRa)</h3>
+                <p data-i18n="projects.meshtastic.meta">Projet personnel · 2026 - aujourd'hui</p>
                 <ul>
-                    <li>Montage, flashage du firmware, config radio : communication chiffrée hors internet</li>
-                    <li>Création d'un club Epitech</li>
+                    <li data-i18n="projects.meshtastic.item1">Montage, flashage du firmware, config radio : communication chiffrée hors internet</li>
+                    <li data-i18n="projects.meshtastic.item2">Création d'un club Epitech</li>
                 </ul>
             </article>
             <article>
-                <h3>Création d'un job board full-stack (projet Epitech en binôme)</h3>
-                <p>2026 · Démo : <a href="https://cozydesk-demo.vercel.app">cozydesk-demo.vercel.app</a></p>
+                <h3 data-i18n="projects.jobboard.title">Création d'un job board full-stack (projet Epitech en binôme)</h3>
+                <p>2026 · <span data-i18n="projects.jobboard.demo">Démo :</span> <a href="https://cozydesk-demo.vercel.app">cozydesk-demo.vercel.app</a></p>
                 <ul>
-                    <li>Responsable back-end : API Python (Flask), PostgreSQL, authentification, back-office</li>
-                    <li>Puis design visuel du front React en appui du binôme (HTML, CSS, JS) · noté 26/26</li>
+                    <li data-i18n="projects.jobboard.item1">Responsable back-end : API Python (Flask), PostgreSQL, authentification, back-office</li>
+                    <li data-i18n="projects.jobboard.item2">Puis design visuel du front React en appui du binôme (HTML, CSS, JS) · noté 26/26</li>
                 </ul>
             </article>
             <article>
-                <h3>Console portable rétro (Raspberry Pi)</h3>
-                <p>Projet personnel · 2023 - aujourd'hui</p>
+                <h3 data-i18n="projects.console.title">Console portable rétro (Raspberry Pi)</h3>
+                <p data-i18n="projects.console.meta">Projet personnel · 2023 - aujourd'hui</p>
                 <ul>
-                    <li>Assemblage d'une console portable à partir d'un Raspberry Pi Zero 2 W et d'un HAT manette avec écran</li>
-                    <li>Installation et configuration de RetroPie sous Linux : image système, émulateurs, mappage des boutons</li>
+                    <li data-i18n="projects.console.item1">Assemblage d'une console portable à partir d'un Raspberry Pi Zero 2 W et d'un HAT manette avec écran</li>
+                    <li data-i18n="projects.console.item2">Installation et configuration de RetroPie sous Linux : image système, émulateurs, mappage des boutons</li>
                 </ul>
             </article>
             <article>
                 <h3>Hack The Box</h3>
-                <p>Plateforme de pratique en pentesting</p>
+                <p data-i18n="projects.htb.meta">Plateforme de pratique en pentesting</p>
                 <ul>
-                    <li>Challenges hacking, web, réseau et forensic</li>
+                    <li data-i18n="projects.htb.item1">Challenges hacking, web, réseau et forensic</li>
                 </ul>
             </article>
         </section>
         <section id="experience">
-            <h2>Expériences</h2>
+            <h2 data-i18n="experience.title">Expériences</h2>
             <article>
-                <h3>Surveillant d'examen - Ingénierie</h3>
-                <p>École Centrale Méditerranée, Marseille · mars 2026 - aujourd'hui</p>
+                <h3 data-i18n="experience.invigilator.title">Surveillant d'examen - Ingénierie</h3>
+                <p data-i18n="experience.invigilator.meta">École Centrale Méditerranée, Marseille · mars 2026 - aujourd'hui</p>
                 <ul>
-                    <li>Accueil et supervision des examens : contrôle d'identité, distribution/collecte des sujets, gestion d'incidents et dépôt des copies</li>
+                    <li data-i18n="experience.invigilator.item1">Accueil et supervision des examens : contrôle d'identité, distribution/collecte des sujets, gestion d'incidents et dépôt des copies</li>
                 </ul>
             </article>
             <article>
-                <h3>Enseignant - Anglais technique</h3>
-                <p>Aix-Marseille Université, Marseille · octobre 2022 - août 2025</p>
+                <h3 data-i18n="experience.teacher.title">Enseignant - Anglais technique</h3>
+                <p data-i18n="experience.teacher.meta">Aix-Marseille Université, Marseille · octobre 2022 - août 2025</p>
                 <ul>
-                    <li>Conception du cursus d'anglais technique pour étudiants en informatique</li>
-                    <li>Contenus spécialisés : IoT, cybersécurité, réseaux et télécoms</li>
+                    <li data-i18n="experience.teacher.item1">Conception du cursus d'anglais technique pour étudiants en informatique</li>
+                    <li data-i18n="experience.teacher.item2">Contenus spécialisés : IoT, cybersécurité, réseaux et télécoms</li>
                 </ul>
             </article>
             <article>
-                <h3>Traducteur indépendant (français → anglais)</h3>
-                <p>Angel Translations, Marseille · mai 2021 - aujourd'hui</p>
+                <h3 data-i18n="experience.translator.title">Traducteur indépendant (français → anglais)</h3>
+                <p data-i18n="experience.translator.meta">Angel Translations, Marseille · mai 2021 - aujourd'hui</p>
                 <ul>
-                    <li>Traduction de documents culturels ; gestion administrative et facturation</li>
+                    <li data-i18n="experience.translator.item1">Traduction de documents culturels ; gestion administrative et facturation</li>
                 </ul>
             </article>
         </section>
         <section id="volunteering">
-            <h2>Bénévolat</h2>
+            <h2 data-i18n="volunteering.title">Bénévolat</h2>
             <article>
                 <h3>Studio Son Mars</h3>
-                <p>Marseille · 2025 - aujourd'hui</p>
+                <p data-i18n="volunteering.studio.meta">Marseille · 2025 - aujourd'hui</p>
                 <ul>
-                    <li>Studio d'enregistrement communautaire : installation audio, gestion de projet</li>
+                    <li data-i18n="volunteering.studio.item1">Studio d'enregistrement communautaire : installation audio, gestion de projet</li>
                 </ul>
             </article>
         </section>
         <section id="skills">
-            <h2>Compétences</h2>
+            <h2 data-i18n="skills.title">Compétences</h2>
             <ul>
-                <li>Systèmes : Linux, Bash, macOS, Windows</li>
-                <li>Réseau : Nmap, TCP/IP, SSH, pare-feu</li>
-                <li>Langages : Python (Flask), SQL (PostgreSQL), HTML, CSS, JavaScript (React), Java, PHP</li>
-                <li>Outils : VirtualBox, QEMU (virt-manager), Docker, Exegol, Kali Linux, Git, Salesforce, Praat</li>
-                <li>Sécurité : bases du test d'intrusion, durcissement, CTF Hack The Box (web, réseau, forensic)</li>
-                <li>Matériel : électronique, firmware, audiovisuel</li>
-                <li>Savoir-être : pédagogie, rigueur, respect des procédures, autonomie, polyvalence, travail en équipe, veille technologique</li>
+                <li data-i18n="skills.systems">Systèmes : Linux, Bash, macOS, Windows</li>
+                <li data-i18n="skills.network">Réseau : Nmap, TCP/IP, SSH, pare-feu</li>
+                <li data-i18n="skills.languages">Langages : Python (Flask), SQL (PostgreSQL), HTML, CSS, JavaScript (React), Java, PHP</li>
+                <li data-i18n="skills.tools">Outils : VirtualBox, QEMU (virt-manager), Docker, Exegol, Kali Linux, Git, Salesforce, Praat</li>
+                <li data-i18n="skills.security">Sécurité : bases du test d'intrusion, durcissement, CTF Hack The Box (web, réseau, forensic)</li>
+                <li data-i18n="skills.hardware">Matériel : électronique, firmware, audiovisuel</li>
+                <li data-i18n="skills.soft">Savoir-être : pédagogie, rigueur, respect des procédures, autonomie, polyvalence, travail en équipe, veille technologique</li>
             </ul>
         </section>
         <section id="certifications">
             <h2>Certifications</h2>
             <ul>
-                <li>Cisco Certified Support Technician (CCST) Cybersecurity · prévue janvier 2027</li>
-                <li>AI Cybersecurity & Governance · Columbia Engineering (en ligne) · 2026 (en cours)</li>
-                <li>Langue des signes française (LSF) - niveau 1 · Aix-Marseille Université · printemps 2024</li>
-                <li>Learn SQL · Codecademy · été 2020</li>
+                <li data-i18n="certifications.ccst">Cisco Certified Support Technician (CCST) Cybersecurity · prévue janvier 2027</li>
+                <li data-i18n="certifications.columbia">AI Cybersecurity & Governance · Columbia Engineering (en ligne) · 2026 (en cours)</li>
+                <li data-i18n="certifications.lsf">Langue des signes française (LSF) - niveau 1 · Aix-Marseille Université · printemps 2024</li>
+                <li data-i18n="certifications.sql">Learn SQL · Codecademy · été 2020</li>
             </ul>
         </section>
         <section id="languages">
-            <h2>Langues</h2>
+            <h2 data-i18n="languages.title">Langues</h2>
             <ul>
-                <li>Anglais : langue maternelle</li>
-                <li>Français : bilingue</li>
-                <li>Espagnol : intermédiaire</li>
-                <li>Arabe : débutant</li>
-                <li>Langue des signes française : débutant</li>
+                <li data-i18n="languages.english">Anglais : langue maternelle</li>
+                <li data-i18n="languages.french">Français : bilingue</li>
+                <li data-i18n="languages.spanish">Espagnol : intermédiaire</li>
+                <li data-i18n="languages.arabic">Arabe : débutant</li>
+                <li data-i18n="languages.lsf">Langue des signes française : débutant</li>
             </ul>
         </section>
         <section id="interests">
-            <h2>Intérêts</h2>
+            <h2 data-i18n="interests.title">Intérêts</h2>
             <ul>
-                <li>Bidouillage électronique/informatique</li>
-                <li>Logiciel libre</li>
-                <li>Rétro-gaming</li>
-                <li>DJ/production et mixage de musique</li>
-                <li>Radio</li>
-                <li>Science-fiction</li>
-                <li>Voyage à vélo et randonnée</li>
+                <li data-i18n="interests.tinkering">Bidouillage électronique/informatique</li>
+                <li data-i18n="interests.foss">Logiciel libre</li>
+                <li data-i18n="interests.retrogaming">Rétro-gaming</li>
+                <li data-i18n="interests.dj">DJ/production et mixage de musique</li>
+                <li data-i18n="interests.radio">Radio</li>
+                <li data-i18n="interests.scifi">Science-fiction</li>
+                <li data-i18n="interests.outdoors">Voyage à vélo et randonnée</li>
             </ul>
         </section>
         <section id="contact-form">
-            <h2>Me contacter</h2>
+            <h2 data-i18n="contact.title">Me contacter</h2>
             <form>
-                <label for="fname">Prénom :</label>
+                <label for="fname" data-i18n="contact.fname">Prénom :</label>
                 <input type="text" id="fname" name="fname" required>
 
-                <label for="lname">Nom de famille :</label>
+                <label for="lname" data-i18n="contact.lname">Nom de famille :</label>
                 <input type="text" id="lname" name="lname" required>
 
-                <label for="email">E-mail :</label>
+                <label for="email" data-i18n="contact.email">E-mail :</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="tel-num">Téléphone :</label>
+                <label for="tel-num" data-i18n="contact.phone">Téléphone :</label>
                 <input type="tel" id="tel-num" name="tel-num">
 
-                <label for="message">Questions / Commentaires :</label>
+                <label for="message" data-i18n="contact.message">Questions / Commentaires :</label>
                 <textarea id="message" name="message" required></textarea>
 
                 <input type="submit" value="> envoyer">
@@ -344,6 +345,6 @@
 
     </main>
     <footer>
-        <p><a href="#">↑ Haut de page ↑</a></p>
-        <p>Chase Angelo RODRIQUES ROQUE - 2026 - Fait en HTML/CSS/JS</p>
+        <p><a href="#" data-i18n="footer.top">↑ Haut de page ↑</a></p>
+        <p data-i18n="footer.credits">Chase Angelo RODRIQUES ROQUE - 2026 - Fait en HTML/CSS/JS</p>
     </footer>
