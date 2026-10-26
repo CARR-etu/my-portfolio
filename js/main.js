@@ -4,6 +4,9 @@ function setLanguage(lang) {
         element.textContent = translations[lang][key];
     });
     document.documentElement.lang = lang;
+    document.querySelectorAll(".lang-switch button").forEach((button) => {
+        button.setAttribute("aria-pressed", button.dataset.lang === lang);
+    });
 }
 
 const menu = document.querySelector("nav details");
@@ -17,8 +20,8 @@ menu.addEventListener("click", (event) => {
 const langSwitch = document.querySelector(".lang-switch");
 
 langSwitch.addEventListener("click", (event) => {
-    const button = event.target.closest("____");
+    const button = event.target.closest("button");
     if (button) {
-        setLanguage(button.dataset.____);
+        setLanguage(button.dataset.lang);
     }
 });
