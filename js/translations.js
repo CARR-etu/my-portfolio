@@ -6,12 +6,24 @@
 
 const translations = {
     fr: {
+        // ===== Tab titles (one per page) =====
+        "title.cv": "Chase Angelo RODRIQUES ROQUE, Étudiant en cybersécurité",
+        "title.projects": "Projets · Chase Angelo RODRIQUES ROQUE",
+        "title.interests": "Intérêts · Chase Angelo RODRIQUES ROQUE",
+
         // ===== Header =====
         "header.subtitle": "Étudiant en cybersécurité",
         "theme.dark": "SOMBRE",
         "theme.light": "CLAIR",
 
-        // ===== Menu =====
+        // ===== Menu: pages =====
+        "nav.page.cv": "CV",
+        "nav.page.projects": "Projets",
+        "nav.page.interests": "Intérêts",
+
+        // ===== Menu: sections =====
+        "nav.overview": "Vue d'ensemble",
+        "nav.jobboard": "Job board full-stack",
         "nav.profile": "Profil",
         "nav.education": "Formation",
         "nav.projects": "Projets",
@@ -138,8 +150,18 @@ const translations = {
         "footer.top": "↑ Haut de page ↑",
         "footer.credits": "Chase Angelo RODRIQUES ROQUE - 2026 - Fait en HTML/CSS/JS",
 
-        // ===== Attributes (for a later step: not text content) =====
-        "attr.title": "Chase Angelo RODRIQUES ROQUE, Étudiant en cybersécurité",
+        // ===== Projects page =====
+        "projects.page.title": "Projets techniques",
+        "projects.page.intro": "Version détaillée des projets de mon CV.",
+
+        // ===== Interests page =====
+        "interests.page.title": "Centres d'intérêt",
+        "interests.page.intro": "Mes projets personnels en dehors de la cybersécurité.",
+
+        // ===== Shared =====
+        "placeholder": "Contenu à venir.",
+
+        // ===== Attributes (set with data-i18n-attr) =====
         "attr.photo": "Photo de Chase Angelo RODRIQUES ROQUE",
         "attr.theme": "Mode clair",
         "attr.submit": "> envoyer",
@@ -147,12 +169,24 @@ const translations = {
     },
 
     en: {
+        // ===== Tab titles (one per page) =====
+        "title.cv": "Chase Angelo RODRIQUES ROQUE, Cybersecurity student",
+        "title.projects": "Projects · Chase Angelo RODRIQUES ROQUE",
+        "title.interests": "Interests · Chase Angelo RODRIQUES ROQUE",
+
         // ===== Header =====
         "header.subtitle": "Cybersecurity student",
         "theme.dark": "DARK",
         "theme.light": "LIGHT",
 
-        // ===== Menu =====
+        // ===== Menu: pages =====
+        "nav.page.cv": "CV",
+        "nav.page.projects": "Projects",
+        "nav.page.interests": "Interests",
+
+        // ===== Menu: sections =====
+        "nav.overview": "Overview",
+        "nav.jobboard": "Full-stack job board",
         "nav.profile": "Profile",
         "nav.education": "Education",
         "nav.projects": "Projects",
@@ -279,8 +313,18 @@ const translations = {
         "footer.top": "↑ Back to top ↑",
         "footer.credits": "Chase Angelo RODRIQUES ROQUE - 2026 - Made with HTML/CSS/JS",
 
-        // ===== Attributes (for a later step) =====
-        "attr.title": "Chase Angelo RODRIQUES ROQUE, Cybersecurity student",
+        // ===== Projects page =====
+        "projects.page.title": "Technical projects",
+        "projects.page.intro": "Detailed version of the projects on my CV.",
+
+        // ===== Interests page =====
+        "interests.page.title": "Interests",
+        "interests.page.intro": "My personal projects outside cybersecurity.",
+
+        // ===== Shared =====
+        "placeholder": "Coming soon.",
+
+        // ===== Attributes (set with data-i18n-attr) =====
         "attr.photo": "Photo of Chase Angelo RODRIQUES ROQUE",
         "attr.theme": "Light mode",
         "attr.submit": "> send",

@@ -343,6 +343,17 @@ nav a {
     text-decoration: none;
 }
 
+/* Line between the page links and the section links */
+nav .menu-separator {
+    margin: 0.5rem 1rem;
+    border-top: 1px solid var(--main);
+}
+
+/* Current page: shown in the accent color */
+nav a[aria-current="page"] {
+    color: var(--second);
+}
+
 
 /* ===== 9. Sections & articles ===== */
 
