@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title.interests">Intérêts · Chase Angelo RODRIQUES ROQUE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/translations.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="id">
+            <h1>Chase Angelo RODRIQUES ROQUE</h1>
+            <p data-i18n="header.subtitle">Étudiant en cybersécurité</p>
+        </div>
+        <div class="header-controls">
+            <ul class="lang-switch">
+                <li><button type="button" data-lang="fr" aria-pressed="true">FR</button></li>
+                <li><button type="button" data-lang="en" aria-pressed="false">EN</button></li>
+            </ul>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle" aria-label="Mode clair" data-i18n-attr="aria-label:attr.theme">
+                <span class="slider"></span>
+                <span class="switch-text switch-dark" data-i18n="theme.dark">SOMBRE</span>
+                <span class="switch-text switch-light" data-i18n="theme.light">CLAIR</span>
+            </label>
+            <nav>
+                <details>
+                    <summary aria-label="Menu">☰</summary>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav.page.cv">CV</a></li>
+                        <li><a href="projects.html" data-i18n="nav.page.projects">Projets</a></li>
+                        <li><a href="interests.html" data-i18n="nav.page.interests" aria-current="page">Intérêts</a></li>
+                        <li class="menu-separator" aria-hidden="true"></li>
+                        <li><a href="#" data-i18n="nav.overview">Vue d'ensemble</a></li>
+                        <li><a href="#dj">DJ</a></li>
+                        <li><a href="#radio">Radio</a></li>
+                        <li><a href="#livecoding">Live coding</a></li>
+                    </ul>
+                </details>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="overview">
+            <h2 data-i18n="interests.page.title">Centres d'intérêt</h2>
+            <p data-i18n="interests.page.intro">Mes projets personnels en dehors de la cybersécurité.</p>
+        </section>
+        <section id="dj">
+            <h2>DJ</h2>
+            <p data-i18n="placeholder">Contenu à venir.</p>
+        </section>
+        <section id="radio">
+            <h2>Radio</h2>
+            <p data-i18n="placeholder">Contenu à venir.</p>
+        </section>
+        <section id="livecoding">
+            <h2>Live coding</h2>
+            <p data-i18n="placeholder">Contenu à venir.</p>
+        </section>
+    </main>
+    <footer>
+        <p><a href="#" data-i18n="footer.top">↑ Haut de page ↑</a></p>
+        <p data-i18n="footer.credits">Chase Angelo RODRIQUES ROQUE - 2026 - Fait en HTML/CSS/JS</p>
+    </footer>
+</body>
+</html>

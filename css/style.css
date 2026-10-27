@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Digital resume — style.css
-   Shared by index.html (FR) and en/index.html (EN)
+   Portfolio — style.css
+   One page, two languages (FR / EN) via i18n in js/translations.js
 
    Contents
    1.  Colors (variables)
@@ -198,7 +198,7 @@ section {
 
 /* ===== 6. Language switch (FR | EN) ===== */
 
-/* Two links shown as one pill */
+/* Two buttons shown as one pill */
 .lang-switch {
     display: inline-flex;
     margin: 0;
@@ -208,18 +208,28 @@ section {
 }
 
 /* Both halves the same width: 7 characters + padding */
-.lang-switch a {
+.lang-switch button {
     display: block;
     width: calc(7ch + 1px);
     padding: 1px;
     text-align: center;
-    text-decoration: none;
+    /* Reset the browser's default button look */
+    font: inherit;
+    color: var(--main);
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
-/* Current language = inverted */
-.lang-switch a[aria-current="page"] {
+/* Current language = inverted (aria-pressed is set by setLanguage in main.js) */
+.lang-switch button[aria-pressed="true"] {
     background-color: var(--main);
     color: var(--bg);
+}
+
+/* Keyboard focus: same ring as the other controls */
+.lang-switch button:focus-visible {
+    outline: 2px solid var(--second);
 }
 
 
@@ -333,6 +343,17 @@ nav a {
     text-decoration: none;
 }
 
+/* Line between the page links and the section links */
+nav .menu-separator {
+    margin: 0.5rem 1rem;
+    border-top: 1px solid var(--main);
+}
+
+/* Current page: shown in the accent color */
+nav a[aria-current="page"] {
+    color: var(--second);
+}
+
 
 /* ===== 9. Sections & articles ===== */
 
@@ -359,6 +380,9 @@ article {
     border-left: 2px solid var(--second);
 }
 
+main:has(section:target) > section:not(:target) {
+    display: none;
+}
 
 /* ===== 10. Neofetch ===== */
 
