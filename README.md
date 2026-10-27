@@ -10,8 +10,9 @@ The design is a retro terminal: a `neofetch`-style introduction, an ASCII-art po
 
 ## Features
 
-- **Bilingual (FR / EN) on a single page**: one HTML file, translations stored in `js/translations.js`, language switched without reloading the page. Text, attributes (`alt`, `aria-label`, button labels) and the tab title are all translated.
-- **Language remembered between visits** with `localStorage`.
+- **Three pages**: the resume (`index.html`), detailed technical projects (`projects.html`) and interests (`interests.html`), linked from a shared menu that shows the current page.
+- **Bilingual (FR / EN) without duplicate pages**: each page exists once, translations are stored in `js/translations.js`, and the language switches without reloading. Text, attributes (`alt`, `aria-label`, button labels) and tab titles are all translated.
+- **Language remembered** between visits and from one page to another, with `localStorage`.
 - **Section filtering**: choosing a section in the menu shows only that section; with no section selected, everything is visible. Done in pure CSS with `:target` and `:has()`.
 - **Menu that closes itself** after a section is chosen (JavaScript).
 - **Dark / light theme** in pure CSS (a checkbox and `:has()`).
@@ -26,7 +27,9 @@ The design is a retro terminal: a `neofetch`-style introduction, an ASCII-art po
 
 ```
 .
-├── index.html            # the page (French text by default)
+├── index.html            # resume (French text by default)
+├── projects.html         # detailed technical projects
+├── interests.html        # interests: DJ, radio, live coding
 ├── css/
 │   └── style.css         # all styles, organized in numbered sections
 ├── js/
@@ -109,6 +112,8 @@ For the portfolio version, JavaScript is allowed. The first follow-up gave five 
 | Menu stayed open after a click | It covered the section the visitor had just chosen. | **Closes itself** (JS click listener with event delegation). |
 | All sections always visible | Long page, hard to focus on one part. | **Section filtering** in pure CSS (`:target` + `:has()`): lighter than JS, works without JS, and the browser's back button works on its own. |
 | Content written for the piscine | Out of date compared with the current CV. | **Content updated** from the cybersecurity CV, sections reordered to match it. |
+| One single page | No room to detail projects or add personal interests without making the resume too long. | **Three pages** (resume, projects, interests) sharing the same header, menu, styles and dictionary. |
+| Site inside a `digital_resume/` folder | The public URL ended in `/digital_resume/`. | **Files at the root** of the repository, so the site is at `carr-etu.github.io/my-portfolio/`. |
 
 ---
 
@@ -116,8 +121,9 @@ For the portfolio version, JavaScript is allowed. The first follow-up gave five 
 
 - [x] Translate attributes (`<title>`, image `alt`, `aria-label`, form button labels)
 - [x] Remember the chosen language with `localStorage`
-- [ ] Interests page (DJ, radio, live coding)
-- [ ] Detailed technical projects page
+- [x] Interests page and detailed projects page: structure, menu and translations in place
+- [ ] Interests page content (DJ, radio, live coding)
+- [ ] Detailed projects content (goals, approach, difficulties, results for each project)
 
 ---
 
