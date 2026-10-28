@@ -85,7 +85,9 @@ No build step and no dependencies. Either:
 
 ## Deployment
 
-Hosted with **GitHub Pages**, deployed from the `main` branch, root folder.
+Hosted with **GitHub Pages**, deployed from the `main` branch, root folder. Every push to `main` publishes the site automatically, in about a minute.
+
+Workflow: larger changes are made on a separate branch (for example `i18n`), merged into `main` through a pull request, then deployed.
 
 ---
 
@@ -115,7 +117,7 @@ For the portfolio version, JavaScript is allowed. The first follow-up gave five 
 | Before | Problem | Now |
 |---|---|---|
 | Two HTML files, one per language | Every change had to be made twice, and the versions drifted apart (the English page was missing a project and had different wording). Switching language loaded a new page, which reset the theme. | **One page + one dictionary** (`translations.js`). Each text exists once per language, and switching is instant. |
-| Translation of text content only (`textContent`) | `textContent` only changes what is *between* the tags. In English mode, the photo's `alt`, the theme switch's `aria-label`, the form buttons and the tab title stayed in French, so screen reader users and the browser tab still got French. | **Attributes translated too**, with `data-i18n-attr` and `setAttribute`, plus `document.title`. |
+| Translation of text content only (`textContent`) | `textContent` only changes what is *between* the tags. In English mode, the photo's `alt`, the theme switch's `aria-label`, the form buttons and the tab title stayed in French, so screen reader users and the browser tab still got French. | **Attributes translated too**, with `data-i18n-attr` and `setAttribute`, and each page's `<title>` has its own `data-i18n` key. |
 | Language reset to French on every reload | A visitor who chose English had to choose again on each visit, and on each page once the site has several pages. | **Choice saved** with `localStorage`. |
 | Menu stayed open after a click | It covered the section the visitor had just chosen. | **Closes itself** (JS click listener with event delegation). |
 | All sections always visible | Long page, hard to focus on one part. | **Section filtering** in pure CSS (`:target` + `:has()`): lighter than JS, works without JS, and the browser's back button works on its own. |
