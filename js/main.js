@@ -19,9 +19,6 @@ function setLanguage(lang) {
         element.setAttribute(attribute, translations[lang][key]);
     });
 
-    // Browser tab title
-    document.title = translations[lang]["attr.title"];
-
     // Page language, for screen readers and search engines
     document.documentElement.lang = lang;
 

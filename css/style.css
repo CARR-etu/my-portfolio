@@ -168,6 +168,12 @@ a:active {
     color: var(--bg);
 }
 
+/* Name in the header = link to the homepage, styled like the title */
+.home-link {
+    color: inherit;
+    text-decoration: none;
+}
+
 
 /* ===== 5. Header ===== */
 
