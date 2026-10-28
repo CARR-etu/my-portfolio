@@ -49,6 +49,7 @@ const translations = {
         // ===== Profil =====
         "profile.title": "Profil",
         "profile.text": "Ancien enseignant d'anglais technique en reconversion vers la cybersécurité, passionné de Linux et de logiciel libre. Je recherche dans le cadre de mon Master au sein d'Epitech une alternance en cybersécurité (SOC, GRC, test d'intrusion) pour appliquer mes compétences systèmes et réseaux avec rigueur et pédagogie.",
+        "profile.cv": "> télécharger mon CV",
 
         // ===== Formation =====
         "education.title": "Formation",
@@ -212,6 +213,7 @@ const translations = {
         // ===== Profile =====
         "profile.title": "Profile",
         "profile.text": "Former technical English teacher retraining in cybersecurity, passionate about Linux and free software. As part of my Master's at Epitech, I am looking for a cybersecurity work-study position (SOC, GRC, penetration testing) to apply my systems and networking skills with rigor and a teacher's clarity.",
+        "profile.cv": "> download my CV",
 
         // ===== Education =====
         "education.title": "Education",

@@ -390,6 +390,16 @@ main:has(section:target) > section:not(:target) {
     display: none;
 }
 
+/* Download CV: terminal-style button, like the form buttons */
+.cv-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-family: "VT323", monospace;
+    font-size: 1.25rem;
+    text-decoration: none;
+    border: 1px solid var(--main);
+}
+
 /* ===== 10. Neofetch ===== */
 
 /* VT323 for the whole block (inherited) */
