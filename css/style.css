@@ -400,6 +400,14 @@ main:has(section:target) > section:not(:target) {
     border: 1px solid var(--main);
 }
 
+/* Screenshots on the interests and projects pages: never wider than their panel */
+.screenshot {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--main);
+}
+
 /* ===== 10. Neofetch ===== */
 
 /* VT323 for the whole block (inherited) */

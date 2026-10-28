@@ -189,11 +189,25 @@ const translations = {
         "detail.htb.goal": "M'entraîner au test d'intrusion sur des machines prévues pour, dans un cadre légal.",
         "detail.htb.step1": "Challenges hacking, web, réseau et forensic",
         "detail.htb.step2": "Environnement d'attaque Exegol sous Docker",
-        "detail.htb.result": "Niveau 9 atteint. Profil :",
+        "detail.htb.result": "Niveau 6 atteint. Profil :",
 
         // ===== Interests page =====
         "interests.page.title": "Centres d'intérêt",
         "interests.page.intro": "Mes projets personnels en dehors de la cybersécurité.",
+
+        // ===== Interests page: DJ =====
+        "interests.dj.intro": "Je mixe et je produis de la musique électronique.",
+        "interests.dj.alt": "Chase Angelo RODRIQUES ROQUE aux platines",
+        "interests.dj.gear": "Matériel : contrôleur DDJ-FLX4, platines CDJ-900 et CDJ-1000, XDJ et XDJ-RR, notions en vinyles",
+        "interests.dj.software": "Logiciel : Rekordbox",
+        "interests.dj.styles": "Styles : techno, industrial, ghetto tech, house, drum and bass, hyperpop",
+        "interests.dj.production": "Production : REAPER, et le sampler-séquenceur",
+
+        // ===== Interests page: live coding =====
+        "interests.livecoding.intro": "Je compose de la musique en code avec Strudel, un outil de live coding qui fonctionne directement dans le navigateur.",
+        "interests.livecoding.alt": "Code Strudel de « Temple du monument perdu » : couches nommées (insectes, robots, ambiance, drone) sur une visualisation en spirale",
+        "interests.livecoding.piece": "Cette capture montre une pièce musicale composée pour accompagner « Temple du monument perdu », un texte que j'ai écrit.",
+        "interests.livecoding.why": "Le live coding réunit deux de mes passions : la programmation et la musique.",
 
         // ===== Shared =====
         "placeholder": "Contenu à venir.",
@@ -389,11 +403,25 @@ const translations = {
         "detail.htb.goal": "Practice penetration testing on machines built for it, within a legal framework.",
         "detail.htb.step1": "Hacking, web, network and forensics challenges",
         "detail.htb.step2": "Exegol attack environment on Docker",
-        "detail.htb.result": "Reached level 9. Profile:",
+        "detail.htb.result": "Reached level 6. Profile:",
 
         // ===== Interests page =====
         "interests.page.title": "Interests",
         "interests.page.intro": "My personal projects outside cybersecurity.",
+
+        // ===== Interests page: DJ =====
+        "interests.dj.intro": "I mix and produce electronic music.",
+        "interests.dj.alt": "Chase Angelo RODRIQUES ROQUE at the decks",
+        "interests.dj.gear": "Gear: DDJ-FLX4 controller, CDJ-900 and CDJ-1000 decks, XDJ and XDJ-RR, basics on vinyl",
+        "interests.dj.software": "Software: Rekordbox",
+        "interests.dj.styles": "Styles: techno, industrial, ghetto tech, house, drum and bass, hyperpop",
+        "interests.dj.production": "Production: REAPER, and the sampler-sequencer",
+
+        // ===== Interests page: live coding =====
+        "interests.livecoding.intro": "I compose music in code with Strudel, a live coding tool that runs right in the browser.",
+        "interests.livecoding.alt": "Strudel code for “Temple du monument perdu”: named layers (insects, robots, ambiance, drone) over a spiral visualization",
+        "interests.livecoding.piece": "This screenshot shows a musical piece composed to accompany “Temple du monument perdu”, a text I wrote.",
+        "interests.livecoding.why": "Live coding brings together two of my passions: programming and music.",
 
         // ===== Shared =====
         "placeholder": "Coming soon.",
