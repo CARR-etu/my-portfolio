@@ -203,6 +203,15 @@ const translations = {
         "interests.dj.styles": "Styles : techno, industrial, ghetto tech, house, drum and bass, hyperpop",
         "interests.dj.production": "Production : REAPER, et le sampler-séquenceur",
 
+        // ===== Interests page: radio =====
+        "interests.radio.intro": "Je fais de la radio avec Radio Bruite,",
+        "interests.radio.and": "et",
+        "interests.radio.gargouille": ", la radio d'Epitech Marseille.",
+        "interests.radio.tech": "Technique : montage d'un plateau radio.",
+        "interests.radio.editorial": "Éditorial : conception et contenu d'une émission.",
+        "interests.radio.shows": "Mes émissions : la création des espaces sonores, et les compétences face au savoir, au savoir-faire et au savoir-être.",
+        "interests.radio.learned": "Aussi : prise de son, interview et montage d'un documentaire sonore.",
+
         // ===== Interests page: live coding =====
         "interests.livecoding.intro": "Je compose de la musique en code avec Strudel, un outil de live coding qui fonctionne directement dans le navigateur.",
         "interests.livecoding.alt": "Code Strudel de « Temple du monument perdu » : couches nommées (insectes, robots, ambiance, drone) sur une visualisation en spirale",
@@ -416,6 +425,15 @@ const translations = {
         "interests.dj.software": "Software: Rekordbox",
         "interests.dj.styles": "Styles: techno, industrial, ghetto tech, house, drum and bass, hyperpop",
         "interests.dj.production": "Production: REAPER, and the sampler-sequencer",
+
+        // ===== Interests page: radio =====
+        "interests.radio.intro": "I do radio with Radio Bruite,",
+        "interests.radio.and": "and",
+        "interests.radio.gargouille": ", the Epitech Marseille radio station.",
+        "interests.radio.tech": "Technical: setting up a radio studio.",
+        "interests.radio.editorial": "Editorial: designing a show and its content.",
+        "interests.radio.shows": "My shows: creating sound spaces, and skills versus knowledge, know-how and soft skills.",
+        "interests.radio.learned": "Also: sound recording, interviewing and editing a sound documentary.",
 
         // ===== Interests page: live coding =====
         "interests.livecoding.intro": "I compose music in code with Strudel, a live coding tool that runs right in the browser.",
