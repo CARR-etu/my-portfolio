@@ -15,11 +15,15 @@ The design is a retro terminal: a `neofetch`-style introduction, an ASCII-art po
 - **Language remembered** between visits and from one page to another, with `localStorage`.
 - **Section filtering**: choosing a section in the menu shows only that section; with no section selected, everything is visible. Done in pure CSS with `:target` and `:has()`.
 - **Menu that closes itself** after a section is chosen (JavaScript).
+- **Name in the header links to the homepage**, and every page has its own tab title and a custom pixel favicon (`>_ CARR`).
+- **Downloadable CV** (PDF) from the profile section.
+- **Contact form** that opens the visitor's email app with the message ready (`mailto:` built in JavaScript); required fields are marked with an asterisk in CSS.
 - **Dark / light theme** in pure CSS (a checkbox and `:has()`).
 - **ASCII portrait with glitch reveal**: the color photo appears on hover, tap or keyboard focus.
 - **Terminal details**: the `neofetch` command types itself, blinking cursors, CRT flicker.
 - **Accessibility**: semantic HTML, keyboard focus styles, `aria-pressed` on the language buttons, and animations disabled for users with `prefers-reduced-motion`.
 - **Responsive**: mobile first, with layouts for tablet and desktop.
+- **Valid HTML**: all three pages pass the W3C validator with no errors.
 
 ---
 
@@ -34,10 +38,14 @@ The design is a retro terminal: a `neofetch`-style introduction, an ASCII-art po
 │   └── style.css         # all styles, organized in numbered sections
 ├── js/
 │   ├── translations.js   # FR / EN dictionary (one key per piece of text)
-│   └── main.js           # language switch, menu behavior
+│   └── main.js           # language switch, menu behavior, contact form
 └── assets/
     ├── photo-color.jpg   # portrait revealed under the ASCII art
-    └── ascii-head-dark.txt
+    ├── ascii-head-dark.txt
+    ├── favicon.svg       # pixel ">_ CARR" tab icon
+    ├── CV-Chase-Angelo-RODRIQUES-ROQUE.pdf
+    ├── djcarr.jpg        # interests page: DJ
+    └── livecodingscreenshot.png  # interests page: live coding (Strudel)
 ```
 
 ---
@@ -122,8 +130,12 @@ For the portfolio version, JavaScript is allowed. The first follow-up gave five 
 - [x] Translate attributes (`<title>`, image `alt`, `aria-label`, form button labels)
 - [x] Remember the chosen language with `localStorage`
 - [x] Interests page and detailed projects page: structure, menu and translations in place
-- [ ] Interests page content (DJ, radio, live coding)
-- [ ] Detailed projects content (goals, approach, difficulties, results for each project)
+- [x] Interests page content (DJ, radio, live coding)
+- [x] Detailed projects content (goal, approach and result for each project)
+- [x] Name in the header links to the homepage, tab titles and custom favicon
+- [x] Downloadable CV and contact form
+- [ ] Add a visually hidden heading to the `neofetch` section (the only W3C validator warning)
+- [ ] Clean up and test the CSS on more devices
 
 ---
 
