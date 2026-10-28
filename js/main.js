@@ -53,6 +53,29 @@ menu.addEventListener("click", (event) => {
     }
 });
 
+/* ===== Contact form ===== */
+
+// On submit: open the visitor's email app with a pre-filled message
+const contactForm = document.querySelector("#contact-form form");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const name = document.querySelector("#fname").value + " " + document.querySelector("#lname").value;
+        const email = document.querySelector("#email").value;
+        const phone = document.querySelector("#tel-num").value;
+        const message = document.querySelector("#message").value;
+
+        const subject = "Contact portfolio : " + name;
+        const body = message + "\n\n" + name + "\n" + email + "\n" + phone;
+
+        window.location.href = "mailto:chase-angelo.rodriques-roque@epitech.eu"
+            + "?subject=" + encodeURIComponent(subject)
+            + "&body=" + encodeURIComponent(body);
+    });
+}
+
 // On page load: apply the saved language, if there is one
 const savedLang = localStorage.getItem("lang");
 if (savedLang) {
