@@ -146,6 +146,7 @@ const translations = {
         "contact.email": "E-mail :",
         "contact.phone": "Téléphone :",
         "contact.message": "Questions / Commentaires :",
+        "contact.required": "Les champs marqués d'un * sont obligatoires.",
 
         // ===== Footer =====
         "footer.top": "↑ Haut de page ↑",
@@ -310,6 +311,7 @@ const translations = {
         "contact.email": "Email:",
         "contact.phone": "Phone:",
         "contact.message": "Questions / Comments:",
+        "contact.required": "Fields marked with * are required.",
 
         // ===== Footer =====
         "footer.top": "↑ Back to top ↑",

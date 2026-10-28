@@ -632,6 +632,12 @@ main:has(section:target) > section:not(:target) {
     color: var(--bg);
 }
 
+/* Asterisk after the label of every required field */
+#contact-form label:has(+ :required)::after {
+    content: " *";
+    color: var(--second);
+}
+
 
 /* ===== 13. Footer ===== */
 
