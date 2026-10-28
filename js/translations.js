@@ -42,9 +42,10 @@ const translations = {
         "neofetch.packages": "11 installés : Linux, Bash, Python, SQL, HTML, CSS, JavaScript, Java, Docker, Git, Nmap",
         "neofetch.de": "Langues : EN · FR · ES · AR · LSF",
         "neofetch.terminal": "Projets : homelab Linux, IA auto-hébergée, Meshtastic, job board, Hack The Box",
-        "neofetch.memory": "Hack The Box : Lvl 6",
+        "neofetch.memory": "Hack The Box : Lvl 9",
         "neofetch.email": "E-mail",
         "neofetch.phone": "Téléphone",
+        "neofetch.phone.link": "sur demande, via le formulaire",
 
         // ===== Profil =====
         "profile.title": "Profil",
@@ -189,7 +190,7 @@ const translations = {
         "detail.htb.goal": "M'entraîner au test d'intrusion sur des machines prévues pour, dans un cadre légal.",
         "detail.htb.step1": "Challenges hacking, web, réseau et forensic",
         "detail.htb.step2": "Environnement d'attaque Exegol sous Docker",
-        "detail.htb.result": "Niveau 6 atteint. Profil :",
+        "detail.htb.result": "Niveau 9 atteint. Profil :",
 
         // ===== Interests page =====
         "interests.page.title": "Centres d'intérêt",
@@ -265,9 +266,10 @@ const translations = {
         "neofetch.packages": "11 installed: Linux, Bash, Python, SQL, HTML, CSS, JavaScript, Java, Docker, Git, Nmap",
         "neofetch.de": "Languages: EN · FR · ES · AR · LSF",
         "neofetch.terminal": "Projects: Linux homelab, self-hosted AI, Meshtastic, job board, Hack The Box",
-        "neofetch.memory": "Hack The Box: Lvl 6",
+        "neofetch.memory": "Hack The Box: Lvl 9",
         "neofetch.email": "Email",
         "neofetch.phone": "Phone",
+        "neofetch.phone.link": "on request, via the contact form",
 
         // ===== Profile =====
         "profile.title": "Profile",
@@ -412,7 +414,7 @@ const translations = {
         "detail.htb.goal": "Practice penetration testing on machines built for it, within a legal framework.",
         "detail.htb.step1": "Hacking, web, network and forensics challenges",
         "detail.htb.step2": "Exegol attack environment on Docker",
-        "detail.htb.result": "Reached level 6. Profile:",
+        "detail.htb.result": "Reached level 9. Profile:",
 
         // ===== Interests page =====
         "interests.page.title": "Interests",
